@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TestEntityOne" representedClassName="TestEntityOne" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="someFloat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="someString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="testEntityThrees" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TestEntityThree" inverseName="testEntityOnes" inverseEntity="TestEntityThree" syncable="YES"/>
+        <relationship name="testEntityTwos" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TestEntityTwo" inverseName="testEntityOne" inverseEntity="TestEntityTwo" syncable="YES"/>
+    </entity>
+    <entity name="TestEntityThree" representedClassName="TestEntityThree" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="someFloat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="someString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="testEntityOnes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TestEntityOne" inverseName="testEntityThrees" inverseEntity="TestEntityOne" syncable="YES"/>
+    </entity>
+    <entity name="TestEntityTwo" representedClassName="TestEntityTwo" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="someDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="someDecimal" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="testEntityOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TestEntityOne" inverseName="testEntityTwos" inverseEntity="TestEntityOne" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TestEntityOne" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="TestEntityTwo" positionX="-63" positionY="9" width="128" height="105"/>
+        <element name="TestEntityThree" positionX="-45" positionY="45" width="128" height="105"/>
+    </elements>
+</model>

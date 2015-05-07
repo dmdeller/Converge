@@ -1,0 +1,73 @@
+PODS:
+  - AFNetworking (2.5.3):
+    - AFNetworking/NSURLConnection (= 2.5.3)
+    - AFNetworking/NSURLSession (= 2.5.3)
+    - AFNetworking/Reachability (= 2.5.3)
+    - AFNetworking/Security (= 2.5.3)
+    - AFNetworking/Serialization (= 2.5.3)
+    - AFNetworking/UIKit (= 2.5.3)
+  - AFNetworking/NSURLConnection (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.3)
+  - AFNetworking/Security (2.5.3)
+  - AFNetworking/Serialization (2.5.3)
+  - AFNetworking/UIKit (2.5.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Converge (1.0.0):
+    - AFNetworking (~> 2.5.0)
+    - InflectorKit (~> 0.0.1)
+    - ISO8601DateFormatter (~> 0.6)
+    - TCKUtilities (~> 1.0.0)
+    - TransformerKit (~> 0.5.0)
+  - InflectorKit (0.0.1)
+  - ISO8601DateFormatter (0.7)
+  - OrderedDictionary (1.1.1)
+  - TCKUtilities (1.0.0):
+    - OrderedDictionary (~> 1.1.0)
+    - TransformerKit (~> 0.5.0)
+  - TransformerKit (0.5.4):
+    - TransformerKit/Core (= 0.5.4)
+    - TransformerKit/Cryptography (= 0.5.4)
+    - TransformerKit/Data (= 0.5.4)
+    - TransformerKit/Date (= 0.5.4)
+    - TransformerKit/Image (= 0.5.4)
+    - TransformerKit/JSON (= 0.5.4)
+    - TransformerKit/String (= 0.5.4)
+  - TransformerKit/Core (0.5.4)
+  - TransformerKit/Cryptography (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/Data (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/Date (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/Image (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/JSON (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/String (0.5.4):
+    - TransformerKit/Core
+
+DEPENDENCIES:
+  - Converge (from `./`)
+
+EXTERNAL SOURCES:
+  Converge:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Converge: 4e57f38cec491958c7380acbdc98fe28f051eb6a
+  InflectorKit: 64497199e6764f4d8337cab7f700a77b13d76a73
+  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  OrderedDictionary: cb1d7521cf0fd4fdfc9173dc8d08b7f42032e3a5
+  TCKUtilities: 9f6f00f5b34b459b005350db4b2da2d0415844d9
+  TransformerKit: 0a235de1030a23d47c86706c0316b4a0c7105d73
+
+COCOAPODS: 0.37.1

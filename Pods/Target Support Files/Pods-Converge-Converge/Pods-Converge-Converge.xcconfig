@@ -1,0 +1,1 @@
+PODS_CONVERGE_CONVERGE_OTHER_LDFLAGS = -framework "CoreData" -framework "SystemConfiguration"

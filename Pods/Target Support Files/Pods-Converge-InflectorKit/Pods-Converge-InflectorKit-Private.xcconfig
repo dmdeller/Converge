@@ -1,0 +1,6 @@
+#include "Pods-Converge-InflectorKit.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/InflectorKit" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Converge" "${PODS_ROOT}/Headers/Public/ISO8601DateFormatter" "${PODS_ROOT}/Headers/Public/InflectorKit" "${PODS_ROOT}/Headers/Public/OrderedDictionary" "${PODS_ROOT}/Headers/Public/TCKUtilities" "${PODS_ROOT}/Headers/Public/TransformerKit"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

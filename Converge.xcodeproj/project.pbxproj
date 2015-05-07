@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E0818C91AE42BF1000C730D /* ConvergeImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0818C81AE42BF1000C730D /* ConvergeImporter.m */; };
+		4E7931DF1AE418BF00CE6E37 /* Converge_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7931DE1AE418BF00CE6E37 /* Converge_Tests.m */; };
+		4E87FA001AE41B7000E181F1 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E87F9FE1AE41B7000E181F1 /* TestModel.xcdatamodeld */; };
+		4ECC9B2F1AA5096500D4351F /* ConvergeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC9B2E1AA5096500D4351F /* ConvergeClient.m */; };
+		4ECC9B321AA5097A00D4351F /* ConvergeRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC9B311AA5097A00D4351F /* ConvergeRecord.m */; };
+		4EE7C9FC1AED4C91004A78D3 /* _TestEntityOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7C9F51AED4C91004A78D3 /* _TestEntityOne.m */; };
+		4EE7C9FD1AED4C91004A78D3 /* _TestEntityTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7C9F71AED4C91004A78D3 /* _TestEntityTwo.m */; };
+		4EE7C9FE1AED4C91004A78D3 /* TestEntityOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7C9F91AED4C91004A78D3 /* TestEntityOne.m */; };
+		4EE7C9FF1AED4C91004A78D3 /* TestEntityTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7C9FB1AED4C91004A78D3 /* TestEntityTwo.m */; };
+		4EE7CA0C1AED4FE9004A78D3 /* _TestEntityThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7CA091AED4FE9004A78D3 /* _TestEntityThree.m */; };
+		4EE7CA0D1AED4FE9004A78D3 /* TestEntityThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7CA0B1AED4FE9004A78D3 /* TestEntityThree.m */; };
+		4EE7CA111AED5243004A78D3 /* Seeds in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7CA101AED5243004A78D3 /* Seeds */; };
+		4EE7CA141AED61EE004A78D3 /* ConvergeRecord+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7CA131AED61EE004A78D3 /* ConvergeRecord+Mapping.m */; };
+		4EE7CA171AED6209004A78D3 /* ConvergeRecord+Merging.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7CA161AED6209004A78D3 /* ConvergeRecord+Merging.m */; };
+		B7FE733C45343EE3B7D8AF8B /* libPods-Converge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9503E72ACD1B8219052F2CB9 /* libPods-Converge.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E7931E11AE418BF00CE6E37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4ECC9B091AA4FC9100D4351F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ECC9B101AA4FC9100D4351F;
+			remoteInfo = Converge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4ECC9B0F1AA4FC9100D4351F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4E0818C71AE42BF1000C730D /* ConvergeImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvergeImporter.h; sourceTree = "<group>"; };
+		4E0818C81AE42BF1000C730D /* ConvergeImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvergeImporter.m; sourceTree = "<group>"; };
+		4E7931DA1AE418BF00CE6E37 /* Converge Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Converge Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E7931DD1AE418BF00CE6E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E7931DE1AE418BF00CE6E37 /* Converge_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Converge_Tests.m; sourceTree = "<group>"; };
+		4E87F9FF1AE41B7000E181F1 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		4E87FA021AE41E1800E181F1 /* regenerate-models.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "regenerate-models.sh"; path = "../regenerate-models.sh"; sourceTree = "<group>"; };
+		4ECC9B111AA4FC9200D4351F /* libConverge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libConverge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ECC9B2B1AA508CB00D4351F /* Converge.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Converge.podspec; sourceTree = "<group>"; };
+		4ECC9B2D1AA5096500D4351F /* ConvergeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvergeClient.h; sourceTree = "<group>"; };
+		4ECC9B2E1AA5096500D4351F /* ConvergeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvergeClient.m; sourceTree = "<group>"; };
+		4ECC9B301AA5097A00D4351F /* ConvergeRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvergeRecord.h; sourceTree = "<group>"; };
+		4ECC9B311AA5097A00D4351F /* ConvergeRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvergeRecord.m; sourceTree = "<group>"; };
+		4ECC9B391AA509BA00D4351F /* Converge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converge.h; sourceTree = "<group>"; };
+		4EE7C9F11AED4A87004A78D3 /* Readme.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.markdown; sourceTree = "<group>"; };
+		4EE7C9F41AED4C91004A78D3 /* _TestEntityOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TestEntityOne.h; sourceTree = "<group>"; };
+		4EE7C9F51AED4C91004A78D3 /* _TestEntityOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TestEntityOne.m; sourceTree = "<group>"; };
+		4EE7C9F61AED4C91004A78D3 /* _TestEntityTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TestEntityTwo.h; sourceTree = "<group>"; };
+		4EE7C9F71AED4C91004A78D3 /* _TestEntityTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TestEntityTwo.m; sourceTree = "<group>"; };
+		4EE7C9F81AED4C91004A78D3 /* TestEntityOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntityOne.h; sourceTree = "<group>"; };
+		4EE7C9F91AED4C91004A78D3 /* TestEntityOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntityOne.m; sourceTree = "<group>"; };
+		4EE7C9FA1AED4C91004A78D3 /* TestEntityTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntityTwo.h; sourceTree = "<group>"; };
+		4EE7C9FB1AED4C91004A78D3 /* TestEntityTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntityTwo.m; sourceTree = "<group>"; };
+		4EE7CA081AED4FE9004A78D3 /* _TestEntityThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TestEntityThree.h; sourceTree = "<group>"; };
+		4EE7CA091AED4FE9004A78D3 /* _TestEntityThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TestEntityThree.m; sourceTree = "<group>"; };
+		4EE7CA0A1AED4FE9004A78D3 /* TestEntityThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntityThree.h; sourceTree = "<group>"; };
+		4EE7CA0B1AED4FE9004A78D3 /* TestEntityThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntityThree.m; sourceTree = "<group>"; };
+		4EE7CA101AED5243004A78D3 /* Seeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Seeds; sourceTree = "<group>"; };
+		4EE7CA121AED61EE004A78D3 /* ConvergeRecord+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConvergeRecord+Mapping.h"; sourceTree = "<group>"; };
+		4EE7CA131AED61EE004A78D3 /* ConvergeRecord+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConvergeRecord+Mapping.m"; sourceTree = "<group>"; };
+		4EE7CA151AED6209004A78D3 /* ConvergeRecord+Merging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConvergeRecord+Merging.h"; sourceTree = "<group>"; };
+		4EE7CA161AED6209004A78D3 /* ConvergeRecord+Merging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConvergeRecord+Merging.m"; sourceTree = "<group>"; };
+		7A88BEB84CE10970D6C626CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9503E72ACD1B8219052F2CB9 /* libPods-Converge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Converge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B5D57C8FE70528E348572F /* Pods-Converge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Converge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Converge/Pods-Converge.debug.xcconfig"; sourceTree = "<group>"; };
+		E681924C16E9A31FB366525F /* Pods-Converge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Converge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Converge/Pods-Converge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E7931D71AE418BF00CE6E37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ECC9B0E1AA4FC9100D4351F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7FE733C45343EE3B7D8AF8B /* libPods-Converge.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A118BEAE077B40C24382302 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4B5D57C8FE70528E348572F /* Pods-Converge.debug.xcconfig */,
+				E681924C16E9A31FB366525F /* Pods-Converge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E0818CA1AE42BF4000C730D /* Import from local files */ = {
+			isa = PBXGroup;
+			children = (
+				4E0818C71AE42BF1000C730D /* ConvergeImporter.h */,
+				4E0818C81AE42BF1000C730D /* ConvergeImporter.m */,
+			);
+			name = "Import from local files";
+			sourceTree = "<group>";
+		};
+		4E2C012C1AA66ABE00B9FCB9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC9B2D1AA5096500D4351F /* ConvergeClient.h */,
+				4ECC9B2E1AA5096500D4351F /* ConvergeClient.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		4E2C012D1AA66AC300B9FCB9 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC9B301AA5097A00D4351F /* ConvergeRecord.h */,
+				4ECC9B311AA5097A00D4351F /* ConvergeRecord.m */,
+				4EE7CA121AED61EE004A78D3 /* ConvergeRecord+Mapping.h */,
+				4EE7CA131AED61EE004A78D3 /* ConvergeRecord+Mapping.m */,
+				4EE7CA151AED6209004A78D3 /* ConvergeRecord+Merging.h */,
+				4EE7CA161AED6209004A78D3 /* ConvergeRecord+Merging.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		4E7931DB1AE418BF00CE6E37 /* Converge Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4E7931DE1AE418BF00CE6E37 /* Converge_Tests.m */,
+				4E87FA011AE41B8300E181F1 /* Data Model */,
+				4EE7CA101AED5243004A78D3 /* Seeds */,
+				4E7931DC1AE418BF00CE6E37 /* Supporting Files */,
+			);
+			path = "Converge Tests";
+			sourceTree = "<group>";
+		};
+		4E7931DC1AE418BF00CE6E37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E7931DD1AE418BF00CE6E37 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E87FA011AE41B8300E181F1 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E87FA021AE41E1800E181F1 /* regenerate-models.sh */,
+				4E87F9FE1AE41B7000E181F1 /* TestModel.xcdatamodeld */,
+				4E87FA091AE41ECA00E181F1 /* Generated by mogenerator */,
+				4EE7C9F81AED4C91004A78D3 /* TestEntityOne.h */,
+				4EE7C9F91AED4C91004A78D3 /* TestEntityOne.m */,
+				4EE7C9FA1AED4C91004A78D3 /* TestEntityTwo.h */,
+				4EE7C9FB1AED4C91004A78D3 /* TestEntityTwo.m */,
+				4EE7CA0A1AED4FE9004A78D3 /* TestEntityThree.h */,
+				4EE7CA0B1AED4FE9004A78D3 /* TestEntityThree.m */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		4E87FA091AE41ECA00E181F1 /* Generated by mogenerator */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7C9F41AED4C91004A78D3 /* _TestEntityOne.h */,
+				4EE7C9F51AED4C91004A78D3 /* _TestEntityOne.m */,
+				4EE7C9F61AED4C91004A78D3 /* _TestEntityTwo.h */,
+				4EE7C9F71AED4C91004A78D3 /* _TestEntityTwo.m */,
+				4EE7CA081AED4FE9004A78D3 /* _TestEntityThree.h */,
+				4EE7CA091AED4FE9004A78D3 /* _TestEntityThree.m */,
+			);
+			name = "Generated by mogenerator";
+			sourceTree = "<group>";
+		};
+		4ECC9B081AA4FC9100D4351F = {
+			isa = PBXGroup;
+			children = (
+				4ECC9B2B1AA508CB00D4351F /* Converge.podspec */,
+				4EE7C9F11AED4A87004A78D3 /* Readme.markdown */,
+				4ECC9B131AA4FC9200D4351F /* Converge */,
+				4E7931DB1AE418BF00CE6E37 /* Converge Tests */,
+				4ECC9B121AA4FC9200D4351F /* Products */,
+				0A118BEAE077B40C24382302 /* Pods */,
+				7D5F2F8AC458F4216E4EDB97 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4ECC9B121AA4FC9200D4351F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC9B111AA4FC9200D4351F /* libConverge.a */,
+				4E7931DA1AE418BF00CE6E37 /* Converge Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4ECC9B131AA4FC9200D4351F /* Converge */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC9B391AA509BA00D4351F /* Converge.h */,
+				4E2C012C1AA66ABE00B9FCB9 /* Network */,
+				4E0818CA1AE42BF4000C730D /* Import from local files */,
+				4E2C012D1AA66AC300B9FCB9 /* Data Model */,
+			);
+			path = Converge;
+			sourceTree = "<group>";
+		};
+		7D5F2F8AC458F4216E4EDB97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9503E72ACD1B8219052F2CB9 /* libPods-Converge.a */,
+				7A88BEB84CE10970D6C626CB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E7931D91AE418BF00CE6E37 /* Converge Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E7931E51AE418BF00CE6E37 /* Build configuration list for PBXNativeTarget "Converge Tests" */;
+			buildPhases = (
+				4E7931D61AE418BF00CE6E37 /* Sources */,
+				4E7931D71AE418BF00CE6E37 /* Frameworks */,
+				4E7931D81AE418BF00CE6E37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E7931E21AE418BF00CE6E37 /* PBXTargetDependency */,
+			);
+			name = "Converge Tests";
+			productName = "Converge Tests";
+			productReference = 4E7931DA1AE418BF00CE6E37 /* Converge Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4ECC9B101AA4FC9100D4351F /* Converge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ECC9B251AA4FC9200D4351F /* Build configuration list for PBXNativeTarget "Converge" */;
+			buildPhases = (
+				AF84E35E7603F650264B7262 /* Check Pods Manifest.lock */,
+				4ECC9B0D1AA4FC9100D4351F /* Sources */,
+				4ECC9B0E1AA4FC9100D4351F /* Frameworks */,
+				4ECC9B0F1AA4FC9100D4351F /* CopyFiles */,
+				4EBAFC0E67150A304946C2E9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Converge;
+			productName = Converge;
+			productReference = 4ECC9B111AA4FC9200D4351F /* libConverge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4ECC9B091AA4FC9100D4351F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "TripCraft LLC";
+				TargetAttributes = {
+					4E7931D91AE418BF00CE6E37 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					4ECC9B101AA4FC9100D4351F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 4ECC9B0C1AA4FC9100D4351F /* Build configuration list for PBXProject "Converge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4ECC9B081AA4FC9100D4351F;
+			productRefGroup = 4ECC9B121AA4FC9200D4351F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4ECC9B101AA4FC9100D4351F /* Converge */,
+				4E7931D91AE418BF00CE6E37 /* Converge Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E7931D81AE418BF00CE6E37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE7CA111AED5243004A78D3 /* Seeds in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EBAFC0E67150A304946C2E9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Converge/Pods-Converge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF84E35E7603F650264B7262 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E7931D61AE418BF00CE6E37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE7C9FC1AED4C91004A78D3 /* _TestEntityOne.m in Sources */,
+				4EE7CA0D1AED4FE9004A78D3 /* TestEntityThree.m in Sources */,
+				4EE7C9FF1AED4C91004A78D3 /* TestEntityTwo.m in Sources */,
+				4EE7C9FD1AED4C91004A78D3 /* _TestEntityTwo.m in Sources */,
+				4EE7C9FE1AED4C91004A78D3 /* TestEntityOne.m in Sources */,
+				4E7931DF1AE418BF00CE6E37 /* Converge_Tests.m in Sources */,
+				4E87FA001AE41B7000E181F1 /* TestModel.xcdatamodeld in Sources */,
+				4EE7CA0C1AED4FE9004A78D3 /* _TestEntityThree.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ECC9B0D1AA4FC9100D4351F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ECC9B2F1AA5096500D4351F /* ConvergeClient.m in Sources */,
+				4EE7CA141AED61EE004A78D3 /* ConvergeRecord+Mapping.m in Sources */,
+				4EE7CA171AED6209004A78D3 /* ConvergeRecord+Merging.m in Sources */,
+				4ECC9B321AA5097A00D4351F /* ConvergeRecord.m in Sources */,
+				4E0818C91AE42BF1000C730D /* ConvergeImporter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E7931E21AE418BF00CE6E37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4ECC9B101AA4FC9100D4351F /* Converge */;
+			targetProxy = 4E7931E11AE418BF00CE6E37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E7931E31AE418BF00CE6E37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B5D57C8FE70528E348572F /* Pods-Converge.debug.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Converge Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4E7931E41AE418BF00CE6E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B5D57C8FE70528E348572F /* Pods-Converge.debug.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Converge Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4ECC9B231AA4FC9200D4351F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4ECC9B241AA4FC9200D4351F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4ECC9B261AA4FC9200D4351F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B5D57C8FE70528E348572F /* Pods-Converge.debug.xcconfig */;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4ECC9B271AA4FC9200D4351F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E681924C16E9A31FB366525F /* Pods-Converge.release.xcconfig */;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E7931E51AE418BF00CE6E37 /* Build configuration list for PBXNativeTarget "Converge Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E7931E31AE418BF00CE6E37 /* Debug */,
+				4E7931E41AE418BF00CE6E37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ECC9B0C1AA4FC9100D4351F /* Build configuration list for PBXProject "Converge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ECC9B231AA4FC9200D4351F /* Debug */,
+				4ECC9B241AA4FC9200D4351F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ECC9B251AA4FC9200D4351F /* Build configuration list for PBXNativeTarget "Converge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ECC9B261AA4FC9200D4351F /* Debug */,
+				4ECC9B271AA4FC9200D4351F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4E87F9FE1AE41B7000E181F1 /* TestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4E87F9FF1AE41B7000E181F1 /* TestModel.xcdatamodel */,
+			);
+			currentVersion = 4E87F9FF1AE41B7000E181F1 /* TestModel.xcdatamodel */;
+			path = TestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4ECC9B091AA4FC9100D4351F /* Project object */;
+}

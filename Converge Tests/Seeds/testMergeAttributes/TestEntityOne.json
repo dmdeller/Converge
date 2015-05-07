@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "some_string": "foo",
+    "some_float": 3.14159
+  },
+  {
+    "id": 2,
+    "some_string": "bar",
+    "some_float": 2.71828
+  }
+]
