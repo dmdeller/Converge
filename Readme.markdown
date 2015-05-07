@@ -1,6 +1,10 @@
 Converge
 ========
 
+![CocoaPod version](https://img.shields.io/cocoapods/v/Converge.svg)
+![License](https://img.shields.io/cocoapods/l/Converge.svg)
+![Build Status](https://img.shields.io/travis/tripcraft/Converge.svg)
+
 Converge is an Objective-C library that receives data from a web server, and puts it into Core Data. It can also do the reverse, sending data from Core Data back to the web server. It uses AFNetworking for HTTP requests and JSON parsing.
 
 Converge is optimized for use with Ruby on Rails servers, and favors the **convention over configuration** philosophy. If you make a Core Data model that is the same as your ActiveRecord model, Converge can figure out most or all of the attributes and relationships automatically, so you don't have to configure (almost) anything.
