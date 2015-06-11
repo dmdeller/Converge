@@ -1,9 +1,9 @@
 Converge
 ========
 
-![CocoaPod version](https://img.shields.io/cocoapods/v/Converge.svg)
-![License](https://img.shields.io/cocoapods/l/Converge.svg)
-![Build Status](https://img.shields.io/travis/tripcraft/Converge.svg)
+[![CocoaPod version](https://img.shields.io/cocoapods/v/Converge.svg)](https://cocoapods.org/pods/Converge)
+[![License](https://img.shields.io/cocoapods/l/Converge.svg)](License.txt)
+[![Build Status](https://img.shields.io/travis/tripcraft/Converge.svg)](https://travis-ci.org/tripcraft/Converge)
 
 Converge is an Objective-C library that receives data from a web server, and puts it into Core Data. It can also do the reverse, sending data from Core Data back to the web server. It uses AFNetworking for HTTP requests and JSON parsing.
 
