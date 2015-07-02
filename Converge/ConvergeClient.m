@@ -64,6 +64,8 @@
     
     NSDate *requestStartTime = NSDate.date;
     NSString *timestampKey = [[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString];
+    
+    // Capture value in case property changes during async blocks
     BOOL trackModifiedTimes = self.trackModifiedTimes;
     
     if (trackModifiedTimes)
@@ -172,6 +174,8 @@
     
     NSDate *requestStartTime = NSDate.date;
     NSString *timestampKey = [[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString];
+    
+    // Capture value in case property changes during async blocks
     BOOL trackModifiedTimes = self.trackModifiedTimes;
     
     if (trackModifiedTimes)
@@ -269,6 +273,8 @@
     
     NSDate *requestStartTime = NSDate.date;
     NSString *timestampKey = [[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString];
+    
+    // Capture value in case property changes during async blocks
     BOOL trackModifiedTimes = self.trackModifiedTimes;
     
     if (trackModifiedTimes)
