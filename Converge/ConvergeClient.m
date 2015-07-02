@@ -64,8 +64,9 @@
     
     NSDate *requestStartTime = NSDate.date;
     NSString *timestampKey = [[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString];
+    BOOL trackModifiedTimes = self.trackModifiedTimes;
     
-    if (self.trackModifiedTimes)
+    if (trackModifiedTimes)
     {
         NSDate *updatedAt = [self.requestTimestamps objectForKey:timestampKey];
         if (updatedAt != nil)
@@ -111,7 +112,7 @@
                                        [records addObject:record];
                                    }
                                    
-                                   if (self.trackModifiedTimes)
+                                   if (trackModifiedTimes)
                                    {
                                        [self.requestTimestamps setObject:requestStartTime forKey:timestampKey];
                                        [self saveRequestTimestamps];
@@ -171,8 +172,9 @@
     
     NSDate *requestStartTime = NSDate.date;
     NSString *timestampKey = [[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString];
+    BOOL trackModifiedTimes = self.trackModifiedTimes;
     
-    if (self.trackModifiedTimes)
+    if (trackModifiedTimes)
     {
         NSDate *updatedAt = [self.requestTimestamps objectForKey:timestampKey];
         if (updatedAt != nil)
@@ -207,7 +209,7 @@
                                NSError *foregroundError = nil;
                                if ([self.context save:&foregroundError])
                                {
-                                   if (self.trackModifiedTimes)
+                                   if (trackModifiedTimes)
                                    {
                                        [self.requestTimestamps setObject:requestStartTime forKey:timestampKey];
                                        [self saveRequestTimestamps];
@@ -267,8 +269,9 @@
     
     NSDate *requestStartTime = NSDate.date;
     NSString *timestampKey = [[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString];
+    BOOL trackModifiedTimes = self.trackModifiedTimes;
     
-    if (self.trackModifiedTimes)
+    if (trackModifiedTimes)
     {
         NSDate *updatedAt = [self.requestTimestamps objectForKey:timestampKey];
         if (updatedAt != nil)
@@ -324,7 +327,7 @@
                                    {
                                        ConvergeRecord *record = (ConvergeRecord *)[self.context objectWithID:recordObjectID];
                                        
-                                       if (self.trackModifiedTimes)
+                                       if (trackModifiedTimes)
                                        {
                                            [self.requestTimestamps setObject:requestStartTime forKey:timestampKey];
                                            [self saveRequestTimestamps];
