@@ -920,7 +920,30 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 continue;
             }
             
-            asDictionary[providerKey] = value;
+            if ([providerKey isKindOfClass:NSArray.class])
+            {
+                NSEnumerator *enumerator = [providerKey reverseObjectEnumerator];
+                NSDictionary *lastDictionary = nil;
+                id keySegment = nil;
+                while ((keySegment = enumerator.nextObject))
+                {
+                    id segmentValue = nil;
+                    if (lastDictionary == nil)
+                    {
+                        segmentValue = value;
+                    }
+                    else
+                    {
+                        segmentValue = lastDictionary;
+                    }
+                    
+                    lastDictionary = @{keySegment: segmentValue};
+                }
+            }
+            else
+            {
+                asDictionary[providerKey] = value;
+            }
         }
     }
     
