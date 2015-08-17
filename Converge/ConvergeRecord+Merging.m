@@ -257,6 +257,82 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
 }
 
 /**
+ * Given a set of attributes and values from provider data, looks for a record with a matching ID and applies the data to that record.
+ * If no record yet exists, creates a new record with the data.
+ */
++ (instancetype)mergeChangesFromProvider:(NSDictionary *)providerRecord withQuery:(NSDictionary *)query recursive:(BOOL)recursive context:(NSManagedObjectContext *)context error:(NSError **)errorRef
+{
+    id idAttribute = [self providerIDAttributeName];
+    
+    id theID = [providerRecord objectAtPath_tc:idAttribute];
+    if (theID == nil)
+    {
+        NSDictionary *userInfo = @{
+            NSLocalizedDescriptionKey: @"The record could not be updated",
+            NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
+            ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
+        };
+        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
+        if (errorRef != nil) *errorRef = error;
+        
+        return nil;
+    }
+    
+    theID = [self convertedID:theID];
+    if (![self value:theID isCorrectClassForAttributeName:self.IDAttributeName inContext:context])
+    {
+        Class correctClass = [self classForAttributeName:self.IDAttributeName inContext:context];
+        
+        NSDictionary *userInfo = @{
+            NSLocalizedDescriptionKey: @"The record could not be updated",
+            NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
+            ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
+            ConvergeMergeableRecordUserInfoExpected: TCKNilToNull(NSStringFromClass(correctClass)),
+            ConvergeMergeableRecordUserInfoActual: TCKNilToNull(theID),
+        };
+        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
+        if (errorRef != nil) *errorRef = error;
+        
+        return nil;
+    }
+    
+    ConvergeRecord *ourRecord = nil;
+    NSError *error = nil;
+    ourRecord = (ConvergeRecord *)[self recordForID:theID context:context error:&error];
+    BOOL isNew = NO;
+    
+    if (ourRecord == nil)
+    {
+        if (error == nil)
+        {
+            isNew = YES;
+            ourRecord = (ConvergeRecord *)[self newRecordInContext:context];
+        }
+        else
+        {
+            if (errorRef != nil) *errorRef = error;
+            return nil;
+        }
+    }
+    
+    error = nil;
+    if ([ourRecord mergeChangesFromProvider:providerRecord withQuery:query recursive:recursive error:&error])
+    {
+        return ourRecord;
+    }
+    else
+    {
+        if (isNew)
+        {
+            [context deleteObject:ourRecord];
+        }
+        
+        if (errorRef != nil) *errorRef = error;
+        return nil;
+    }
+}
+
+/**
  * Given an array of attributes and values from provider data, applies the data to all of the records matched by the predicate.
  *
  * @param shouldDeleteStale Also deletes records matched by the predicate that are not in the provider data. For more discussion on this, see TCKProvider -fetchRecordClass:withQuery:success:onChange:failure:.
@@ -267,90 +343,39 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
     
     for (NSDictionary *providerRecord in collection)
     {
-        id idAttribute = [self providerIDAttributeName];
-        
-        id theID = [providerRecord objectAtPath_tc:idAttribute];
-        if (theID == nil)
-        {
-            if (skipInvalid)
-            {
-                NSLog(@"%@: Skipping record because ID attribute (%@) was not found: %@", self, idAttribute, providerRecord);
-                continue;
-            }
-            else
-            {
-                NSDictionary *userInfo = @{
-                    NSLocalizedDescriptionKey: @"The record could not be updated",
-                    NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
-                    ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
-                };
-                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
-                if (errorRef != nil) *errorRef = error;
-                
-                return nil;
-            }
-        }
-        
-        theID = [self convertedID:theID];
-        if (![self value:theID isCorrectClassForAttributeName:self.IDAttributeName inContext:context])
-        {
-            Class correctClass = [self classForAttributeName:self.IDAttributeName inContext:context];
-            
-            if (skipInvalid)
-            {
-                NSLog(@"%@: Skipping record because ID attribute (%@) is wrong class; expected %@, found %@ (%@)", self.class, self.IDAttributeName, correctClass, [theID class], theID);
-                continue;
-            }
-            else
-            {
-                NSDictionary *userInfo = @{
-                    NSLocalizedDescriptionKey: @"The record could not be updated",
-                    NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
-                    ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
-                };
-                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
-                if (errorRef != nil) *errorRef = error;
-                
-                return nil;
-            }
-        }
-        
-        ConvergeRecord *ourRecord = nil;
         NSError *error = nil;
-        ourRecord = (ConvergeRecord *)[self recordForID:theID context:context error:&error];
-        BOOL isNew = NO;
-        
-        if (ourRecord == nil)
-        {
-            if (error == nil)
-            {
-                isNew = YES;
-                ourRecord = (ConvergeRecord *)[self newRecordInContext:context];
-            }
-            else
-            {
-                if (errorRef != nil) *errorRef = error;
-                return nil;
-            }
-        }
-        
-        error = nil;
-        if ([ourRecord mergeChangesFromProvider:providerRecord withQuery:query recursive:recursive error:&error])
+        ConvergeRecord *ourRecord = [self mergeChangesFromProvider:providerRecord withQuery:query recursive:recursive context:context error:&error];
+        if (ourRecord != nil)
         {
             [ourRecords addObject:ourRecord];
         }
         else
         {
-            if (isNew)
-            {
-                [context deleteObject:ourRecord];
-            }
-            
             if (skipInvalid)
             {
-                NSDictionary *changedValues = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoChangedValues]);
+                if ([error.domain isEqualToString:ConvergeRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorProviderIDMissing)
+                {
+                    NSLog(@"%@: Skipping record because ID attribute (%@) was not found: %@", self, self.IDAttributeName, providerRecord);
+                }
+                else if ([error.domain isEqualToString:ConvergeRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorProviderIDWrongType)
+                {
+                    NSString *correctClassName = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoExpected]);
+                    id theID = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoActual]);
+                    
+                    NSLog(@"%@: Skipping record because ID attribute (%@) is wrong class; expected %@, found %@ (%@)", self.class, self.IDAttributeName, correctClassName, [theID class], theID);
+                }
+                else if ([error.domain isEqualToString:ConvergeRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorFailedValidation)
+                {
+                    NSDictionary *changedValues = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoChangedValues]);
+                    
+                    NSLog(@"%@: Skipping record because changes failed validation, will not be updated: %@, error: %@", self.class, changedValues, error.userInfo);
+                }
+                else
+                {
+                    if (errorRef != nil) *errorRef = error;
+                    return nil;
+                }
                 
-                NSLog(@"%@: Skipping record because changes failed validation, will not be updated: %@, error: %@", self.class, changedValues, error.userInfo);
                 continue;
             }
             else

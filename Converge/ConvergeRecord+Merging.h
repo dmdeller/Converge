@@ -27,6 +27,8 @@ typedef enum
 static NSString *const ConvergeMergeableRecordUserInfoLogMessage = @"com.tripcraft.converge.record.mergeable.user-info.log-message";
 static NSString *const ConvergeMergeableRecordUserInfoRecord = @"com.tripcraft.converge.record.mergeable.user-info.record";
 static NSString *const ConvergeMergeableRecordUserInfoProviderData = @"com.tripcraft.converge.record.mergeable.user-info.provider-data";
+static NSString *const ConvergeMergeableRecordUserInfoExpected = @"com.tripcraft.converge.record.mergeable.user-info.expected";
+static NSString *const ConvergeMergeableRecordUserInfoActual = @"com.tripcraft.converge.record.mergeable.user-info.actual";
 static NSString *const ConvergeMergeableRecordUserInfoOriginalError = @"com.tripcraft.converge.record.mergeable.user-info.original-error";
 static NSString *const ConvergeMergeableRecordUserInfoValidationType = @"com.tripcraft.converge.record.mergeable.user-info.validation-type";
 static NSString *const ConvergeMergeableRecordUserInfoChangedValues = @"com.tripcraft.converge.record.mergeable.user-info.changed-values";
@@ -58,6 +60,7 @@ typedef id (^ConvergeAttributeConversionBlock)(id value);
 
 /// @name Importing Data From Provider
 - (BOOL)mergeChangesFromProvider:(NSDictionary *)providerRecord withQuery:(NSDictionary *)query recursive:(BOOL)recursive error:(NSError **)errorRef;
++ (instancetype)mergeChangesFromProvider:(NSDictionary *)providerRecord withQuery:(NSDictionary *)query recursive:(BOOL)recursive context:(NSManagedObjectContext *)context error:(NSError **)errorRef;
 + (NSArray *)mergeChangesFromProviderCollection:(NSArray *)collection withQuery:(NSDictionary *)query recursive:(BOOL)recursive deleteStale:(BOOL)shouldDeleteStale context:(NSManagedObjectContext *)context skipInvalidRecords:(BOOL)skipInvalid error:(NSError **)errorRef;
 
 /// @name Exporting Data to Other Formats
