@@ -10,10 +10,6 @@ import XCTest
 import CoreData
 @testable import Converge
 
-class TestEntityOne: NSManagedObject {
-    
-}
-
 class ConvergeTests: XCTestCase {
     
     var context: NSManagedObjectContext!

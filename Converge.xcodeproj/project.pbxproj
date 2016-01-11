@@ -14,6 +14,12 @@
 		4E1427061C4422D3000E223F /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427051C4422D3000E223F /* Importer.swift */; };
 		4E14270A1C444981000E223F /* Seeds in Resources */ = {isa = PBXBuildFile; fileRef = 4E1427091C444981000E223F /* Seeds */; };
 		4E14270D1C444992000E223F /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E14270B1C444992000E223F /* TestModel.xcdatamodeld */; };
+		4E1427141C4449C6000E223F /* TestEntityThree+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14270E1C4449C6000E223F /* TestEntityThree+CoreDataProperties.swift */; };
+		4E1427151C4449C6000E223F /* TestEntityThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14270F1C4449C6000E223F /* TestEntityThree.swift */; };
+		4E1427161C4449C6000E223F /* TestEntityTwo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427101C4449C6000E223F /* TestEntityTwo+CoreDataProperties.swift */; };
+		4E1427171C4449C6000E223F /* TestEntityTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427111C4449C6000E223F /* TestEntityTwo.swift */; };
+		4E1427181C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427121C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift */; };
+		4E1427191C4449C6000E223F /* TestEntityOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427131C4449C6000E223F /* TestEntityOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,12 @@
 		4E1427051C4422D3000E223F /* Importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
 		4E1427091C444981000E223F /* Seeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Seeds; sourceTree = "<group>"; };
 		4E14270C1C444992000E223F /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		4E14270E1C4449C6000E223F /* TestEntityThree+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestEntityThree+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E14270F1C4449C6000E223F /* TestEntityThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntityThree.swift; sourceTree = "<group>"; };
+		4E1427101C4449C6000E223F /* TestEntityTwo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestEntityTwo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E1427111C4449C6000E223F /* TestEntityTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntityTwo.swift; sourceTree = "<group>"; };
+		4E1427121C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestEntityOne+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E1427131C4449C6000E223F /* TestEntityOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntityOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				4E14270B1C444992000E223F /* TestModel.xcdatamodeld */,
+				4E1427131C4449C6000E223F /* TestEntityOne.swift */,
+				4E1427121C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift */,
+				4E1427111C4449C6000E223F /* TestEntityTwo.swift */,
+				4E1427101C4449C6000E223F /* TestEntityTwo+CoreDataProperties.swift */,
+				4E14270F1C4449C6000E223F /* TestEntityThree.swift */,
+				4E14270E1C4449C6000E223F /* TestEntityThree+CoreDataProperties.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -224,8 +242,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1427161C4449C6000E223F /* TestEntityTwo+CoreDataProperties.swift in Sources */,
 				4E1426F91C441FC6000E223F /* ConvergeTests.swift in Sources */,
+				4E1427151C4449C6000E223F /* TestEntityThree.swift in Sources */,
+				4E1427141C4449C6000E223F /* TestEntityThree+CoreDataProperties.swift in Sources */,
+				4E1427181C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift in Sources */,
+				4E1427191C4449C6000E223F /* TestEntityOne.swift in Sources */,
 				4E14270D1C444992000E223F /* TestModel.xcdatamodeld in Sources */,
+				4E1427171C4449C6000E223F /* TestEntityTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
