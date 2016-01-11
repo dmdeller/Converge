@@ -12,6 +12,8 @@
 		4E1426F91C441FC6000E223F /* ConvergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1426F81C441FC6000E223F /* ConvergeTests.swift */; };
 		4E1427041C442072000E223F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427031C442072000E223F /* Record.swift */; };
 		4E1427061C4422D3000E223F /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427051C4422D3000E223F /* Importer.swift */; };
+		4E14270A1C444981000E223F /* Seeds in Resources */ = {isa = PBXBuildFile; fileRef = 4E1427091C444981000E223F /* Seeds */; };
+		4E14270D1C444992000E223F /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E14270B1C444992000E223F /* TestModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		4E1426FA1C441FC6000E223F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E1427031C442072000E223F /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		4E1427051C4422D3000E223F /* Importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
+		4E1427091C444981000E223F /* Seeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Seeds; sourceTree = "<group>"; };
+		4E14270C1C444992000E223F /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +91,19 @@
 			isa = PBXGroup;
 			children = (
 				4E1426F81C441FC6000E223F /* ConvergeTests.swift */,
+				4E1427071C444954000E223F /* Data Model */,
+				4E1427091C444981000E223F /* Seeds */,
 				4E1426FA1C441FC6000E223F /* Info.plist */,
 			);
 			path = ConvergeTests;
+			sourceTree = "<group>";
+		};
+		4E1427071C444954000E223F /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E14270B1C444992000E223F /* TestModel.xcdatamodeld */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E14270A1C444981000E223F /* Seeds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1426F91C441FC6000E223F /* ConvergeTests.swift in Sources */,
+				4E14270D1C444992000E223F /* TestModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +415,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4E14270B1C444992000E223F /* TestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4E14270C1C444992000E223F /* TestModel.xcdatamodel */,
+			);
+			currentVersion = 4E14270C1C444992000E223F /* TestModel.xcdatamodel */;
+			path = TestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E1426E01C441FC6000E223F /* Project object */;
 }
