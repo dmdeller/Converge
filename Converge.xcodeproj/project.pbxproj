@@ -10,6 +10,8 @@
 		4E1426ED1C441FC6000E223F /* Converge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1426EC1C441FC6000E223F /* Converge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E1426F41C441FC6000E223F /* Converge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1426E91C441FC6000E223F /* Converge.framework */; };
 		4E1426F91C441FC6000E223F /* ConvergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1426F81C441FC6000E223F /* ConvergeTests.swift */; };
+		4E1427041C442072000E223F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427031C442072000E223F /* Record.swift */; };
+		4E1427061C4422D3000E223F /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427051C4422D3000E223F /* Importer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		4E1426F31C441FC6000E223F /* ConvergeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1426F81C441FC6000E223F /* ConvergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvergeTests.swift; sourceTree = "<group>"; };
 		4E1426FA1C441FC6000E223F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E1427031C442072000E223F /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		4E1427051C4422D3000E223F /* Importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				4E1426EC1C441FC6000E223F /* Converge.h */,
 				4E1426EE1C441FC6000E223F /* Info.plist */,
+				4E1427031C442072000E223F /* Record.swift */,
+				4E1427051C4422D3000E223F /* Importer.swift */,
 			);
 			path = Converge;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1427041C442072000E223F /* Record.swift in Sources */,
+				4E1427061C4422D3000E223F /* Importer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 		4E1426FE1C441FC6000E223F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tripcraft.Converge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4E1426FF1C441FC6000E223F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +387,7 @@
 				4E1426FF1C441FC6000E223F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E1427001C441FC6000E223F /* Build configuration list for PBXNativeTarget "ConvergeTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +396,7 @@
 				4E1427021C441FC6000E223F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
