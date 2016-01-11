@@ -22,7 +22,7 @@ class ConvergeTests: XCTestCase {
         setUpCoreData()
         
         // FIXME
-        importer = Importer(context_: context)
+        importer = Importer(context: context)
     }
     
     func setUpCoreData() {

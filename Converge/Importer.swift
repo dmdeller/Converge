@@ -12,8 +12,8 @@ public class Importer {
     
     var context: NSManagedObjectContext
     
-    public init(context_: NSManagedObjectContext) {
-        context = context_
+    public init(context: NSManagedObjectContext) {
+        self.context = context
     }
     
     public func importFrom(recordClass: AnyClass, filePath: String, success: (result: AnyObject?) -> Void, failure: (error: NSError) -> Void) {
