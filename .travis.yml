@@ -2,3 +2,6 @@ language: objective-c
 xcode_workspace: Converge.xcworkspace
 xcode_scheme: Converge Tests
 xcode_sdk: iphonesimulator8.1
+branches:
+  except:
+    - swift2
