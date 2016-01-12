@@ -16,7 +16,7 @@ public class Importer {
         self.context = context
     }
     
-    public func importFrom(recordClass: AnyClass, filePath: String, success: (result: AnyObject?) -> Void, failure: (error: NSError) -> Void) {
+    public func importFrom(recordClass recordClass: AnyClass, filePath: String, success: (result: AnyObject?) -> Void, failure: (error: NSError) -> Void) {
         
     }
     
