@@ -77,6 +77,7 @@ public class Record: NSManagedObject {
         return try recordWhere([IDAttributeName(): ID], requireAll: true, sortBy: nil, context: context)
     }
     
+    // FIXME: Should return [Self], but Swift doesn't allow this: http://stackoverflow.com/a/32701108/72581
     public class func allRecords(sortedBy sortDescriptors: [NSSortDescriptor]?, context: NSManagedObjectContext) throws -> [Record] {
         return try recordsWhere(Dictionary(), requireAll: true, sortBy: sortDescriptors, limit: 0, context: context)
     }
@@ -84,7 +85,7 @@ public class Record: NSManagedObject {
     /**
      * Given a list of attribute name and value pairs, returns any records that match.
      */
-    public class func recordsWhere(conditions: Dictionary<String, AnyObject>, requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, limit: Int, context: NSManagedObjectContext) throws -> [Record] {
+    public class func recordsWhere(conditions: [String: AnyObject?], requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, limit: Int, context: NSManagedObjectContext) throws -> [Record] {
         
         let fetch = fetchRequestWhere(conditions, requireAll: requireAll, sortBy: sortDescriptors, limit: limit, context: context)
         return try context.executeFetchRequest(fetch) as! [Record]
@@ -96,7 +97,7 @@ public class Record: NSManagedObject {
         return try context.executeFetchRequest(fetch) as! [Record]
     }
     
-    public class func recordWhere(conditions: Dictionary<String, AnyObject>, requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, context: NSManagedObjectContext) throws -> Record? {
+    public class func recordWhere(conditions: [String: AnyObject?], requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, context: NSManagedObjectContext) throws -> Record? {
         
         return try recordsWhere(conditions, requireAll: requireAll, sortBy: sortDescriptors, limit: 1, context: context).first
     }
@@ -106,7 +107,7 @@ public class Record: NSManagedObject {
         return try recordsWhere(predicateString, arguments: arguments, sortBy: sortDescriptors, limit: 1, context: context).first
     }
     
-    public class func fetchedResultsControllerWhere(conditions: Dictionary<String, AnyObject>, requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, limit: Int, context: NSManagedObjectContext) -> NSFetchedResultsController {
+    public class func fetchedResultsControllerWhere(conditions: [String: AnyObject?], requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, limit: Int, context: NSManagedObjectContext) -> NSFetchedResultsController {
         
         let fetch = fetchRequestWhere(conditions, requireAll: requireAll, sortBy: sortDescriptors, limit: limit, context: context)
         return NSFetchedResultsController(fetchRequest: fetch, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
@@ -118,7 +119,7 @@ public class Record: NSManagedObject {
         return NSFetchedResultsController(fetchRequest: fetch, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }
     
-    public class func fetchRequestWhere(conditions: Dictionary<String, AnyObject>, requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, limit: Int, context: NSManagedObjectContext) -> NSFetchRequest {
+    public class func fetchRequestWhere(conditions: [String: AnyObject?], requireAll: Bool, sortBy sortDescriptors: [NSSortDescriptor]?, limit: Int, context: NSManagedObjectContext) -> NSFetchRequest {
         
         var compoundPredicate: NSPredicate?
         
@@ -127,8 +128,19 @@ public class Record: NSManagedObject {
             var predicates: [NSPredicate] = []
             
             for (attributeName, value) in conditions {
+                // NSPredicate.init(format, argumentArray) specifies argumentArray as [AnyObject], which means the array can't contain nil, even though that would be a perfectly cromulent predicate.
+                // So, let's stick an NSNull in there like it's 1999
+                let wrappedValue: AnyObject = {
+                    if value == nil {
+                        return NSNull()
+                    } else {
+                        return value!
+                    }
+                }()
+                
                 // This is a little bit crazy... you can't pass the attribute name in as an argument to predicateWithFormat:, so we're formatting the string twice...
-                predicates.append(NSPredicate(format: "\(attributeName) == %@", argumentArray: [value]))
+                let predicate = NSPredicate(format: "\(attributeName) == %@", argumentArray: [wrappedValue])
+                predicates.append(predicate)
             }
             
             if requireAll {
@@ -168,7 +180,7 @@ public class Record: NSManagedObject {
     
     // MARK: -
     
-    public func dictionary() -> Dictionary<String, AnyObject> {
+    public func dictionary() -> [String: AnyObject?] {
         // FIXME: This is rather horrible
         return dictionaryWithValuesForKeys((entity.attributesByName as NSDictionary).allKeys as! [String])
     }
@@ -269,7 +281,7 @@ public class Record: NSManagedObject {
     
     // MARK: - Hybrid
     
-    public class func newOrExistingRecord(withProperties properties: Dictionary<String, AnyObject>, inContext context: NSManagedObjectContext) throws -> Record {
+    public class func newOrExistingRecord(withProperties properties: [String: AnyObject?], inContext context: NSManagedObjectContext) throws -> Record {
         
         var sortDescriptors: [NSSortDescriptor] = []
         for (key, _) in properties {
