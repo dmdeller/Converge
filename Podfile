@@ -5,6 +5,7 @@ use_frameworks!
 
 pod 'TransformerKit', '~> 0.5'
 pod 'InflectorKit', '~> 0.0'
+pod 'Cent', '~> 4.1'
 
 #target 'Converge' do
 #

@@ -1,4 +1,7 @@
 PODS:
+  - Cent (4.1.0):
+    - Dollar (~> 4.1.0)
+  - Dollar (4.1.0)
   - InflectorKit (0.0.1)
   - TransformerKit (0.5.4):
     - TransformerKit/Core (= 0.5.4)
@@ -23,10 +26,13 @@ PODS:
     - TransformerKit/Core
 
 DEPENDENCIES:
+  - Cent (~> 4.1)
   - InflectorKit (~> 0.0)
   - TransformerKit (~> 0.5)
 
 SPEC CHECKSUMS:
+  Cent: 9960f0a1963631c6164cdb43bd3344d04b793fe3
+  Dollar: 1ee47922ccdfda5b572c8a4956b08986f1b4c429
   InflectorKit: 64497199e6764f4d8337cab7f700a77b13d76a73
   TransformerKit: 0a235de1030a23d47c86706c0316b4a0c7105d73
 

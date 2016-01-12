@@ -7,99 +7,198 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		158B598D96EC7F368BF919D305EC1AF8 /* TTTStringInflector.h in Headers */ = {isa = PBXBuildFile; fileRef = FB43B9D40B5F40BFB206214296B71E5A /* TTTStringInflector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27CB0016508B08BBF53EDC43EE2F40D2 /* TransformerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6CB11DD825D193DA4515B3C91028D /* TransformerKit-dummy.m */; };
-		292EBB9837AC537A33EDC7047875DA0D /* TTTCryptographyTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BD5D54111F7025C76A86603D58BECA1 /* TTTCryptographyTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		299056D68D72B5A45C0E1CF641FFD068 /* TTTStringInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1734000CC51591F98250FAA9727F4C /* TTTStringInflector.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2E32716986400490745D2161FA5209B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		3BE828C91ECA3D345C090A8F9446D4BE /* TTTDateTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ED767C1A3FDFB76C5E9F7160A169F8 /* TTTDateTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3EF389A5D8428D65768A4BE68C9471DA /* TTTImageTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C8B7805711D615FFCD8C74FE7A0E78 /* TTTImageTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49CB236A7B0B72FA95189A74B1D0FC61 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DF886F9203A3E99ED571A4AA69F187E /* TTTCryptographyTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = A22BF24CCDA7B322E02F38779AD81F9C /* TTTCryptographyTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6377BB90A8ACF97E563125C9B4575FD6 /* NSValueTransformer+TransformerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1699CDE2568364CAB2985ACE748F82C4 /* NSValueTransformer+TransformerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		658F9FA68479569466A4812F37EC2A66 /* TTTDateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E37BC14A917B9C15843C4CFEB5090 /* TTTDateTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7DB71BD4694D019AECA11971BAC2D9A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		838E43C4A5568B005581CCCC050F7325 /* TTTImageTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E153B4505BAD858F12500084E3F50 /* TTTImageTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8BB3965F1313E45A9EF1E5ADF516FA0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		98A86EB830112B32A1331CE136E4B9AB /* TTTStringTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 45EBC4B03B39DA0523F3E832BAEBEB5B /* TTTStringTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E2E79EECA9762558094C0FDDD34FA15 /* TTTJSONTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D7D2130A0749C6B050051223BCFB7B /* TTTJSONTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A99174F9CBB11FDAF46FE4934DDE0B00 /* InflectorKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC4815C7EA6DD6F35731ED920E70439 /* InflectorKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEEA07FB17D706A4E0C251CFB67FDCE3 /* TransformerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4DA05F22FCE25F3F812AC84C5764E08 /* TransformerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0C02835A707442717B758AA507A4AC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */; };
-		B845CF33F7A0481E698D79EF4A7C6850 /* InflectorKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C24AC727571B8CFB38F476109C3E90BF /* InflectorKit-dummy.m */; };
-		C2AFF13B5B35284EA564698EF837AFBC /* NSValueTransformer+TransformerKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCEC71DDE60704833AD8FC5035AFD86 /* NSValueTransformer+TransformerKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D6E41A98E91B20FFE8D287A364F95FE2 /* NSString+InflectorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D9899B4B506AFDA59721C979F9118628 /* NSString+InflectorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7B8C46880355F89BC6E3C7F4B2E5AAC /* NSString+InflectorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E7217C4AA9D73D2E0BAD7C025A60E /* NSString+InflectorKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EDE47D96EF831B22DD8117ED1DD0EEA2 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		F898439018FB27D7F40C15E763EA04F3 /* TTTStringTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E14347D065ABF06A7F244CE4129387 /* TTTStringTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FD382F1BB75D597925575F52C1B98A5F /* TTTJSONTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = D84E99DC3BF710E471E1EE1768FFF9FE /* TTTJSONTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CE6B4F3E03B6945A960002C1BFF128E /* TTTStringTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = CB662948407A219769DA3B68A46CA214 /* TTTStringTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		113330AEF3C9EE22FC23866DBD49D42F /* TTTDateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAB4686313E096EF02AFEA41E14B79 /* TTTDateTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		158B598D96EC7F368BF919D305EC1AF8 /* TTTStringInflector.h in Headers */ = {isa = PBXBuildFile; fileRef = 138A27A0B9D45A71B8425278795290AC /* TTTStringInflector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF2D74AE82E965D23F5D021D152246E /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40441031CF565289A84B1A5DF0F2360B /* Dollar.swift */; };
+		23C35803D67738B306FCAC9254F2D0EC /* TransformerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BDD7BAF87C370F763952E8595D60F5 /* TransformerKit-dummy.m */; };
+		26AB92AE0648C265FF56FFDE8705D377 /* NSValueTransformer+TransformerKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF511D543154A3A28B0F3C571943772 /* NSValueTransformer+TransformerKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		299056D68D72B5A45C0E1CF641FFD068 /* TTTStringInflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BBDAE8222B47EB9B32C77DEF4F97C8 /* TTTStringInflector.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		29D4DB4E0395BA345C07C825BAEBF378 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */; };
+		33740FDFC1EF0E6BC8D06A673C2019E7 /* Dollar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D6379A1F4EBA66B2EF192C8A9779 /* Dollar-dummy.m */; };
+		33D45F781689572FA5F7B2B18BA69ED5 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64210F9E05BC52740CDB2BB986A50F2 /* Regex.swift */; };
+		367607429E0FE574BD6F53D82F424C51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */; };
+		3B4DDF1F03B799E8FD3D35AE2CE00813 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4473ABBAE3EDF34C8A6FF863FD24658B /* NSValueTransformer+TransformerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5B41E5DFC034E94325C374C38C2785 /* NSValueTransformer+TransformerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D08D453DC817C2EE0FAC58940CFDF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */; };
+		5A604271E2706BC989EB696415E08573 /* TTTJSONTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 133550384374AF7781E60649AA8D1505 /* TTTJSONTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C3F3A3FA70C07D311688211F2CD98DE /* TTTJSONTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB3609D6DE748F901A51AA32C40F4 /* TTTJSONTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5D14D9D561A0CD6DF1217C11CFEF6BDC /* TTTImageTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58899C9170CEF7BAEB3CC0AA7E5245 /* TTTImageTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		68245A8E73FE45617612DAF70DB91C28 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3223FFB60079B44EB0958B5D653C453 /* Dollar.framework */; };
+		6CEB181C3D5D3A19AE5CC9D617913866 /* AutoCurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9370AC19A353EF8F4B83A9DB8B26EB4E /* AutoCurry.swift */; };
+		733867F45741D2305F5C469F53C7425C /* Dollar.h in Headers */ = {isa = PBXBuildFile; fileRef = 45FA9F100D4F3A3E4583D8FDB0D09C29 /* Dollar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73A47E26BE9E03DBE8C5764B9E6505D3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7987A8B241B8267BD7348F0CDFF5E6B3 /* Security.framework */; };
+		7A31A1B68643CD80CB744D6C51D63230 /* Dollar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D8EAADABADB13C715F49E8004E19CF7 /* Dollar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BB02FB8A2F34307B0E552FC4CB51A07 /* TTTCryptographyTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = FC225838406D24FEA9AAF008DD718013 /* TTTCryptographyTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7CCFAC9AFFA63357E2AC12EAA55A8756 /* Cent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B77B232BB07BBF53AFAF789A94F98FD4 /* Cent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F1E84368DF596D80FF73923B7B793E1 /* Cent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE16392978BEB4C5665A69B2051750C /* Cent-dummy.m */; };
+		83F5CDD8665551B838069990A4C9909C /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9537A6C8151380F9D28656DF1D985 /* Dictionary.swift */; };
+		881CB7FCCFA6173F4BEDE23803D75B72 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60CA63E6AADADBFC951F8BBB72850F /* Range.swift */; };
+		8BB3965F1313E45A9EF1E5ADF516FA0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */; };
+		9399BDD2CE57F45998378DB886A43ED7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D900AE04C911942812B81E117608B4 /* Date.swift */; };
+		9BAFDD324C40DEEF6442231FDC8D4518 /* TTTCryptographyTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 97830E1C632BA4664D05A4BCAF3B69BD /* TTTCryptographyTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F453A540F3FC35E0549275D6561044 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728FAC6D0CFA81DAFCBCD492ED462EF8 /* String.swift */; };
+		A99174F9CBB11FDAF46FE4934DDE0B00 /* InflectorKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8118BC12827A79197870F0BB070FF12D /* InflectorKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB064862BD6DA2F4295CA303DCA4C7BF /* TTTDateTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 712466CFCE8AC6342566466E6D890167 /* TTTDateTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD520382254F807C11A3E7BD1997681F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D03C1BF8ADD8D8A19900F42A72519 /* Int.swift */; };
+		B845CF33F7A0481E698D79EF4A7C6850 /* InflectorKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EFEAE25DDADEFB820921273BFAD067 /* InflectorKit-dummy.m */; };
+		BE70EE512AB0E64778FB166DF19390D6 /* TTTStringTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 9942B3B1FED19051C0F1EDAA3CA4ED01 /* TTTStringTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7AC429A2F8566D9C746B08DA1D9096E /* TTTImageTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9F604391483436CE93CC82A8CDCCC2 /* TTTImageTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E41A98E91B20FFE8D287A364F95FE2 /* NSString+InflectorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 381BB6617BB99497FBE570A20D4F9975 /* NSString+InflectorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC22E5133BD710BB755D5224CF838FC6 /* TransformerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FADC10E944E86E9F33628B49CDA6CCA /* TransformerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E568CC1C4E497794D8790EA8BD58FBC3 /* Cent.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A7B75084EED7821668FD10921EFCF1 /* Cent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7B8C46880355F89BC6E3C7F4B2E5AAC /* NSString+InflectorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F9170207661D8D9495111848057D2521 /* NSString+InflectorKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EF1ACC4A58BE3F8D57DEEC112FD641FC /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		FAB9920A2C7EE48D69A75EE1A79FDFFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */; };
+		FEBDAAD6FE95EC983933A27E0F0A7458 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B1970DD175125942D3104E4F80C2E /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EDDB69F26416C372DF22066F24324581 /* PBXContainerItemProxy */ = {
+		11EE6A6566FD5AF288F995CBD9D56F71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3FC04E21C6CFEF1BAAE87FBB72AC6C6F;
 			remoteInfo = InflectorKit;
 		};
-		F7E7144941B2E0EF05D862981FFCB290 /* PBXContainerItemProxy */ = {
+		6DB447B6ADECE33781522DBBFAE513F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3532EAA4AFBC52E2896EA88B4360B635;
+			remoteGlobalIDString = 21981BD422205F07E3594868193146EE;
+			remoteInfo = Dollar;
+		};
+		7ADF101F99EE7C531DAB868948DD13AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9A15D6AB22C535189E0BDDBA1032A6D;
 			remoteInfo = TransformerKit;
+		};
+		B2DC53F1EE26CF2F171EF648E3A89983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E307F847AC3BEDF2FA9B74017BB9908;
+			remoteInfo = Cent;
+		};
+		D550860457D3FAD1736A6FE313DDAD13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21981BD422205F07E3594868193146EE;
+			remoteInfo = Dollar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0307982621563C439755B9BC0ED60A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0B263EC8E9C5B22E57B1374B674B25FC /* TransformerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransformerKit.xcconfig; sourceTree = "<group>"; };
-		0D4E7217C4AA9D73D2E0BAD7C025A60E /* NSString+InflectorKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+InflectorKit.m"; path = "InflectorKit/NSString+InflectorKit.m"; sourceTree = "<group>"; };
-		143E37BC14A917B9C15843C4CFEB5090 /* TTTDateTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTDateTransformers.m; path = TransformerKit/TTTDateTransformers.m; sourceTree = "<group>"; };
-		1699CDE2568364CAB2985ACE748F82C4 /* NSValueTransformer+TransformerKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+TransformerKit.h"; path = "TransformerKit/NSValueTransformer+TransformerKit.h"; sourceTree = "<group>"; };
+		00E5D6379A1F4EBA66B2EF192C8A9779 /* Dollar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Dollar-dummy.m"; sourceTree = "<group>"; };
+		07078E7261FD0B8F34E7269CDF4C5336 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		073BD3E3BB3237624058F6EF2BA9419F /* InflectorKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InflectorKit-prefix.pch"; sourceTree = "<group>"; };
+		0A9F604391483436CE93CC82A8CDCCC2 /* TTTImageTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTImageTransformers.h; path = TransformerKit/TTTImageTransformers.h; sourceTree = "<group>"; };
+		10BBDAE8222B47EB9B32C77DEF4F97C8 /* TTTStringInflector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTStringInflector.m; path = InflectorKit/TTTStringInflector.m; sourceTree = "<group>"; };
+		10D900AE04C911942812B81E117608B4 /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Cent/Cent/Date.swift; sourceTree = "<group>"; };
+		133550384374AF7781E60649AA8D1505 /* TTTJSONTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTJSONTransformer.h; path = TransformerKit/TTTJSONTransformer.h; sourceTree = "<group>"; };
+		138A27A0B9D45A71B8425278795290AC /* TTTStringInflector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTStringInflector.h; path = InflectorKit/TTTStringInflector.h; sourceTree = "<group>"; };
+		13BC7D9763DB7BC35BD2101612F9474E /* Cent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF511D543154A3A28B0F3C571943772 /* NSValueTransformer+TransformerKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+TransformerKit.m"; path = "TransformerKit/NSValueTransformer+TransformerKit.m"; sourceTree = "<group>"; };
+		1FADC10E944E86E9F33628B49CDA6CCA /* TransformerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransformerKit-umbrella.h"; sourceTree = "<group>"; };
+		229B1970DD175125942D3104E4F80C2E /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Cent/Cent/Array.swift; sourceTree = "<group>"; };
+		26BC34C48932E7BE56C01815F00A7DE9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EFEAE25DDADEFB820921273BFAD067 /* InflectorKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InflectorKit-dummy.m"; sourceTree = "<group>"; };
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		41D7D2130A0749C6B050051223BCFB7B /* TTTJSONTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTJSONTransformer.m; path = TransformerKit/TTTJSONTransformer.m; sourceTree = "<group>"; };
-		45EBC4B03B39DA0523F3E832BAEBEB5B /* TTTStringTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTStringTransformers.h; path = TransformerKit/TTTStringTransformers.h; sourceTree = "<group>"; };
-		55C8B7805711D615FFCD8C74FE7A0E78 /* TTTImageTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTImageTransformers.h; path = TransformerKit/TTTImageTransformers.h; sourceTree = "<group>"; };
-		5F7103B624941CDF674F2B054B6E2A71 /* InflectorKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InflectorKit.xcconfig; sourceTree = "<group>"; };
-		60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		6EC4815C7EA6DD6F35731ED920E70439 /* InflectorKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InflectorKit-umbrella.h"; sourceTree = "<group>"; };
+		30BDD7BAF87C370F763952E8595D60F5 /* TransformerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransformerKit-dummy.m"; sourceTree = "<group>"; };
+		381BB6617BB99497FBE570A20D4F9975 /* NSString+InflectorKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+InflectorKit.h"; path = "InflectorKit/NSString+InflectorKit.h"; sourceTree = "<group>"; };
+		394E174E6B71595ACF5F661B791D87A2 /* InflectorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InflectorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C8BCAC99329DD71184EE220A67CFD5 /* TransformerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransformerKit-prefix.pch"; sourceTree = "<group>"; };
+		3D8EAADABADB13C715F49E8004E19CF7 /* Dollar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dollar-umbrella.h"; sourceTree = "<group>"; };
+		3F5A8C89F257DC84DF1AE48DB5A39406 /* Dollar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dollar-prefix.pch"; sourceTree = "<group>"; };
+		40441031CF565289A84B1A5DF0F2360B /* Dollar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dollar.swift; path = Dollar/Dollar/Dollar.swift; sourceTree = "<group>"; };
+		45FA9F100D4F3A3E4583D8FDB0D09C29 /* Dollar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Dollar.h; path = Dollar/Dollar/Dollar.h; sourceTree = "<group>"; };
+		488838EC3FE83537B7DF7996EDCEC2E3 /* TransformerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TransformerKit.modulemap; sourceTree = "<group>"; };
+		4986F832A151B67F39E38648BF3CB4B9 /* InflectorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = InflectorKit.modulemap; sourceTree = "<group>"; };
+		4AE16392978BEB4C5665A69B2051750C /* Cent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cent-dummy.m"; sourceTree = "<group>"; };
+		4CC42AEA9BF649F90841E4CFAAAC4134 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EF7E730C46BD5723BCC7138EFE1C03F /* TransformerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransformerKit.xcconfig; sourceTree = "<group>"; };
+		59A7B75084EED7821668FD10921EFCF1 /* Cent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cent.h; path = Cent/Cent/Cent.h; sourceTree = "<group>"; };
+		5DA9537A6C8151380F9D28656DF1D985 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Cent/Cent/Dictionary.swift; sourceTree = "<group>"; };
+		5E495488713925ECB389F54A41D65624 /* Cent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cent.modulemap; sourceTree = "<group>"; };
+		61BF60E09734B66BBE0BDCFEAF240165 /* Dollar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Dollar.xcconfig; sourceTree = "<group>"; };
+		641B30D32CE4D5F8E108CB8E30EB67E0 /* InflectorKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InflectorKit.xcconfig; sourceTree = "<group>"; };
+		6D5B41E5DFC034E94325C374C38C2785 /* NSValueTransformer+TransformerKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+TransformerKit.h"; path = "TransformerKit/NSValueTransformer+TransformerKit.h"; sourceTree = "<group>"; };
+		6EBAB4686313E096EF02AFEA41E14B79 /* TTTDateTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTDateTransformers.m; path = TransformerKit/TTTDateTransformers.m; sourceTree = "<group>"; };
+		712466CFCE8AC6342566466E6D890167 /* TTTDateTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTDateTransformers.h; path = TransformerKit/TTTDateTransformers.h; sourceTree = "<group>"; };
+		728FAC6D0CFA81DAFCBCD492ED462EF8 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Cent/Cent/String.swift; sourceTree = "<group>"; };
+		7987A8B241B8267BD7348F0CDFF5E6B3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		84DB1CF4982F8E91C494CEE49AC536F1 /* TransformerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransformerKit-prefix.pch"; sourceTree = "<group>"; };
+		8118BC12827A79197870F0BB070FF12D /* InflectorKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InflectorKit-umbrella.h"; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		8F1A4B3BA6FCDE1F20C0A6A876FF3100 /* InflectorKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InflectorKit-prefix.pch"; sourceTree = "<group>"; };
-		8FCEC71DDE60704833AD8FC5035AFD86 /* NSValueTransformer+TransformerKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+TransformerKit.m"; path = "TransformerKit/NSValueTransformer+TransformerKit.m"; sourceTree = "<group>"; };
+		9370AC19A353EF8F4B83A9DB8B26EB4E /* AutoCurry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoCurry.swift; path = Dollar/Dollar/AutoCurry.swift; sourceTree = "<group>"; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		9BD5D54111F7025C76A86603D58BECA1 /* TTTCryptographyTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTCryptographyTransformers.h; path = TransformerKit/TTTCryptographyTransformers.h; sourceTree = "<group>"; };
-		9C1734000CC51591F98250FAA9727F4C /* TTTStringInflector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTStringInflector.m; path = InflectorKit/TTTStringInflector.m; sourceTree = "<group>"; };
-		9D2E153B4505BAD858F12500084E3F50 /* TTTImageTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTImageTransformers.m; path = TransformerKit/TTTImageTransformers.m; sourceTree = "<group>"; };
-		A22BF24CCDA7B322E02F38779AD81F9C /* TTTCryptographyTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTCryptographyTransformers.m; path = TransformerKit/TTTCryptographyTransformers.m; sourceTree = "<group>"; };
+		97830E1C632BA4664D05A4BCAF3B69BD /* TTTCryptographyTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTCryptographyTransformers.h; path = TransformerKit/TTTCryptographyTransformers.h; sourceTree = "<group>"; };
+		97E9AAA579CD56275FCDA1519C28F7DF /* Cent.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cent.xcconfig; sourceTree = "<group>"; };
+		9942B3B1FED19051C0F1EDAA3CA4ED01 /* TTTStringTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTStringTransformers.h; path = TransformerKit/TTTStringTransformers.h; sourceTree = "<group>"; };
+		A64210F9E05BC52740CDB2BB986A50F2 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Cent/Cent/Regex.swift; sourceTree = "<group>"; };
+		AC9D03C1BF8ADD8D8A19900F42A72519 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int.swift; path = Cent/Cent/Int.swift; sourceTree = "<group>"; };
+		AFDFB7CD6468F31247E77FE5F3CF5516 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B77B232BB07BBF53AFAF789A94F98FD4 /* Cent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cent-umbrella.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C17EEB1AE34AD7F3DBBFE5055FAB3BB6 /* InflectorKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = InflectorKit.modulemap; sourceTree = "<group>"; };
-		C24AC727571B8CFB38F476109C3E90BF /* InflectorKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InflectorKit-dummy.m"; sourceTree = "<group>"; };
-		C33CCD8D8572260B1AA09ABF64926F13 /* TransformerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TransformerKit.modulemap; sourceTree = "<group>"; };
-		C4DA05F22FCE25F3F812AC84C5764E08 /* TransformerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransformerKit-umbrella.h"; sourceTree = "<group>"; };
+		BE60CA63E6AADADBFC951F8BBB72850F /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = Cent/Cent/Range.swift; sourceTree = "<group>"; };
+		C3223FFB60079B44EB0958B5D653C453 /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A83BF10AC546CDBFCD216E42F3ADCD /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB662948407A219769DA3B68A46CA214 /* TTTStringTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTStringTransformers.m; path = TransformerKit/TTTStringTransformers.m; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CDF7BAEB069039B411FB8BD17207DB7F /* Dollar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Dollar.modulemap; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D2E14347D065ABF06A7F244CE4129387 /* TTTStringTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTStringTransformers.m; path = TransformerKit/TTTStringTransformers.m; sourceTree = "<group>"; };
-		D84E99DC3BF710E471E1EE1768FFF9FE /* TTTJSONTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTJSONTransformer.h; path = TransformerKit/TTTJSONTransformer.h; sourceTree = "<group>"; };
-		D988C7EBE78D25DAB91A39FB09D593AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9899B4B506AFDA59721C979F9118628 /* NSString+InflectorKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+InflectorKit.h"; path = "InflectorKit/NSString+InflectorKit.h"; sourceTree = "<group>"; };
+		D2E64067C0C1A25D5648294087F0AA29 /* Cent-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cent-prefix.pch"; sourceTree = "<group>"; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		E5DE6CEF72A43431D335D03C847A7FBA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7ED767C1A3FDFB76C5E9F7160A169F8 /* TTTDateTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTDateTransformers.h; path = TransformerKit/TTTDateTransformers.h; sourceTree = "<group>"; };
+		DAEAB3609D6DE748F901A51AA32C40F4 /* TTTJSONTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTJSONTransformer.m; path = TransformerKit/TTTJSONTransformer.m; sourceTree = "<group>"; };
+		E064F29D956C841F7218BEECCE4015F0 /* TransformerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransformerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA2DAA92438057F79AB98AE80D7278B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB245D6FB0CD1DB26BF3EEC784FCE166 /* TransformerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransformerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED796F54CF514EE19C36F66DE006204E /* InflectorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InflectorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB43B9D40B5F40BFB206214296B71E5A /* TTTStringInflector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTTStringInflector.h; path = InflectorKit/TTTStringInflector.h; sourceTree = "<group>"; };
-		FDF6CB11DD825D193DA4515B3C91028D /* TransformerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransformerKit-dummy.m"; sourceTree = "<group>"; };
+		F9170207661D8D9495111848057D2521 /* NSString+InflectorKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+InflectorKit.m"; path = "InflectorKit/NSString+InflectorKit.m"; sourceTree = "<group>"; };
+		FC225838406D24FEA9AAF008DD718013 /* TTTCryptographyTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTCryptographyTransformers.m; path = TransformerKit/TTTCryptographyTransformers.m; sourceTree = "<group>"; };
+		FC58899C9170CEF7BAEB3CC0AA7E5245 /* TTTImageTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTTImageTransformers.m; path = TransformerKit/TTTImageTransformers.m; sourceTree = "<group>"; };
+		FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FFC75C091FA2883410D4674E3379A7A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34DD07F4AACEFA7D8A892D1065235EF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D4DB4E0395BA345C07C825BAEBF378 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DAE8FF10278D17C63D9214CE0CD024F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB9920A2C7EE48D69A75EE1A79FDFFC /* Foundation.framework in Frameworks */,
+				73A47E26BE9E03DBE8C5764B9E6505D3 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D12D8D9FF6D6A5800817FBDF7EE3AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D08D453DC817C2EE0FAC58940CFDF6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20574A1398B3840E0251A73F8F31D15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68245A8E73FE45617612DAF70DB91C28 /* Dollar.framework in Frameworks */,
+				367607429E0FE574BD6F53D82F424C51 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF81376AE132488BB29E5662BBAFF478 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,91 +207,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E23D11CEF3DCA60F5601539E3DAE770C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E32716986400490745D2161FA5209B2 /* Foundation.framework in Frameworks */,
-				B0C02835A707442717B758AA507A4AC8 /* Security.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E652A768540A5620E3635A886308E93F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DB71BD4694D019AECA11971BAC2D9A9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14B31BB6BA5F4C726740D2B5525F6092 /* Cryptography */ = {
+		1C3D2EFC30A6C4B1CE077DFE76DC0815 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9BD5D54111F7025C76A86603D58BECA1 /* TTTCryptographyTransformers.h */,
-				A22BF24CCDA7B322E02F38779AD81F9C /* TTTCryptographyTransformers.m */,
+				5E495488713925ECB389F54A41D65624 /* Cent.modulemap */,
+				97E9AAA579CD56275FCDA1519C28F7DF /* Cent.xcconfig */,
+				4AE16392978BEB4C5665A69B2051750C /* Cent-dummy.m */,
+				D2E64067C0C1A25D5648294087F0AA29 /* Cent-prefix.pch */,
+				B77B232BB07BBF53AFAF789A94F98FD4 /* Cent-umbrella.h */,
+				FFC75C091FA2883410D4674E3379A7A0 /* Info.plist */,
 			);
-			name = Cryptography;
+			name = "Support Files";
+			path = "../Target Support Files/Cent";
 			sourceTree = "<group>";
 		};
-		27E17B6836C078195961BE3FB1A02655 /* JSON */ = {
+		315F47EA0E89C006B3BAF7E8682451EF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D84E99DC3BF710E471E1EE1768FFF9FE /* TTTJSONTransformer.h */,
-				41D7D2130A0749C6B050051223BCFB7B /* TTTJSONTransformer.m */,
-			);
-			name = JSON;
-			sourceTree = "<group>";
-		};
-		3235CF2D338FC1BE40346833291BA485 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EA2DAA92438057F79AB98AE80D7278B8 /* Info.plist */,
-				C33CCD8D8572260B1AA09ABF64926F13 /* TransformerKit.modulemap */,
-				0B263EC8E9C5B22E57B1374B674B25FC /* TransformerKit.xcconfig */,
-				FDF6CB11DD825D193DA4515B3C91028D /* TransformerKit-dummy.m */,
-				84DB1CF4982F8E91C494CEE49AC536F1 /* TransformerKit-prefix.pch */,
-				C4DA05F22FCE25F3F812AC84C5764E08 /* TransformerKit-umbrella.h */,
+				AFDFB7CD6468F31247E77FE5F3CF5516 /* Info.plist */,
+				488838EC3FE83537B7DF7996EDCEC2E3 /* TransformerKit.modulemap */,
+				4EF7E730C46BD5723BCC7138EFE1C03F /* TransformerKit.xcconfig */,
+				30BDD7BAF87C370F763952E8595D60F5 /* TransformerKit-dummy.m */,
+				39C8BCAC99329DD71184EE220A67CFD5 /* TransformerKit-prefix.pch */,
+				1FADC10E944E86E9F33628B49CDA6CCA /* TransformerKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/TransformerKit";
 			sourceTree = "<group>";
 		};
-		3759269A3D388A3B55680E7D654F6EC6 /* Image */ = {
+		42487B9551CACB9947DF2A69C5F6B8E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				55C8B7805711D615FFCD8C74FE7A0E78 /* TTTImageTransformers.h */,
-				9D2E153B4505BAD858F12500084E3F50 /* TTTImageTransformers.m */,
+				7187B44B89D2723D380625838288F529 /* Cent */,
+				B69EF32AC479346E100E47EF461F9F7F /* Dollar */,
+				CBA18ED2821C5ED3A9E2C6B0EFE4214A /* InflectorKit */,
+				F1BEC56C4DFBCB861D6306635FF90142 /* TransformerKit */,
 			);
-			name = Image;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		656F0122810D7097A82B032849418991 /* Cryptography */ = {
 			isa = PBXGroup;
 			children = (
-				5A86A7991AF0B723B7571D408852AEBF /* iOS */,
+				97830E1C632BA4664D05A4BCAF3B69BD /* TTTCryptographyTransformers.h */,
+				FC225838406D24FEA9AAF008DD718013 /* TTTCryptographyTransformers.m */,
 			);
-			name = Frameworks;
+			name = Cryptography;
 			sourceTree = "<group>";
 		};
-		50E1D9DB6FADBAFD9DFD319BD3B28CE1 /* String */ = {
+		7187B44B89D2723D380625838288F529 /* Cent */ = {
 			isa = PBXGroup;
 			children = (
-				45EBC4B03B39DA0523F3E832BAEBEB5B /* TTTStringTransformers.h */,
-				D2E14347D065ABF06A7F244CE4129387 /* TTTStringTransformers.m */,
+				229B1970DD175125942D3104E4F80C2E /* Array.swift */,
+				59A7B75084EED7821668FD10921EFCF1 /* Cent.h */,
+				10D900AE04C911942812B81E117608B4 /* Date.swift */,
+				5DA9537A6C8151380F9D28656DF1D985 /* Dictionary.swift */,
+				AC9D03C1BF8ADD8D8A19900F42A72519 /* Int.swift */,
+				BE60CA63E6AADADBFC951F8BBB72850F /* Range.swift */,
+				A64210F9E05BC52740CDB2BB986A50F2 /* Regex.swift */,
+				728FAC6D0CFA81DAFCBCD492ED462EF8 /* String.swift */,
+				1C3D2EFC30A6C4B1CE077DFE76DC0815 /* Support Files */,
 			);
-			name = String;
+			path = Cent;
 			sourceTree = "<group>";
 		};
-		5A86A7991AF0B723B7571D408852AEBF /* iOS */ = {
+		723DADE6070F7AFECD9C75502999192E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0307982621563C439755B9BC0ED60A1A /* Foundation.framework */,
-				60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */,
+				CDF7BAEB069039B411FB8BD17207DB7F /* Dollar.modulemap */,
+				61BF60E09734B66BBE0BDCFEAF240165 /* Dollar.xcconfig */,
+				00E5D6379A1F4EBA66B2EF192C8A9779 /* Dollar-dummy.m */,
+				3F5A8C89F257DC84DF1AE48DB5A39406 /* Dollar-prefix.pch */,
+				3D8EAADABADB13C715F49E8004E19CF7 /* Dollar-umbrella.h */,
+				07078E7261FD0B8F34E7269CDF4C5336 /* Info.plist */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/Dollar";
 			sourceTree = "<group>";
 		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
@@ -213,53 +306,88 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
+		7BBAF6B0DF55A1274C43CE70EA3300F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13BC7D9763DB7BC35BD2101612F9474E /* Cent.framework */,
+				C7A83BF10AC546CDBFCD216E42F3ADCD /* Dollar.framework */,
+				394E174E6B71595ACF5F661B791D87A2 /* InflectorKit.framework */,
+				26BC34C48932E7BE56C01815F00A7DE9 /* Pods.framework */,
+				E064F29D956C841F7218BEECCE4015F0 /* TransformerKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				C011EBDD36D6EC920AC5C8AF67DB8617 /* Pods */,
-				A8E7340C3E9FEAC9316AE18475A8AB5E /* Products */,
+				E69BD822B3F950629A96BB5BE788F6D3 /* Frameworks */,
+				42487B9551CACB9947DF2A69C5F6B8E8 /* Pods */,
+				7BBAF6B0DF55A1274C43CE70EA3300F7 /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		92B28B9AA94998E666BF2B12CFCC1921 /* Support Files */ = {
+		80781E2A40AE01C491D9472A0027AFFF /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				C17EEB1AE34AD7F3DBBFE5055FAB3BB6 /* InflectorKit.modulemap */,
-				5F7103B624941CDF674F2B054B6E2A71 /* InflectorKit.xcconfig */,
-				C24AC727571B8CFB38F476109C3E90BF /* InflectorKit-dummy.m */,
-				8F1A4B3BA6FCDE1F20C0A6A876FF3100 /* InflectorKit-prefix.pch */,
-				6EC4815C7EA6DD6F35731ED920E70439 /* InflectorKit-umbrella.h */,
-				D988C7EBE78D25DAB91A39FB09D593AE /* Info.plist */,
+				0A9F604391483436CE93CC82A8CDCCC2 /* TTTImageTransformers.h */,
+				FC58899C9170CEF7BAEB3CC0AA7E5245 /* TTTImageTransformers.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		91F0DADA2DA752B6691DF4B1CBCF0BE5 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				9942B3B1FED19051C0F1EDAA3CA4ED01 /* TTTStringTransformers.h */,
+				CB662948407A219769DA3B68A46CA214 /* TTTStringTransformers.m */,
+			);
+			name = String;
+			sourceTree = "<group>";
+		};
+		A38CC20295EFEDCFDD9835EF3D3ED317 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4986F832A151B67F39E38648BF3CB4B9 /* InflectorKit.modulemap */,
+				641B30D32CE4D5F8E108CB8E30EB67E0 /* InflectorKit.xcconfig */,
+				29EFEAE25DDADEFB820921273BFAD067 /* InflectorKit-dummy.m */,
+				073BD3E3BB3237624058F6EF2BA9419F /* InflectorKit-prefix.pch */,
+				8118BC12827A79197870F0BB070FF12D /* InflectorKit-umbrella.h */,
+				4CC42AEA9BF649F90841E4CFAAAC4134 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/InflectorKit";
 			sourceTree = "<group>";
 		};
-		A8E7340C3E9FEAC9316AE18475A8AB5E /* Products */ = {
+		AE7B69725713060544F6DF03E314ADB9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				ED796F54CF514EE19C36F66DE006204E /* InflectorKit.framework */,
-				E5DE6CEF72A43431D335D03C847A7FBA /* Pods.framework */,
-				EB245D6FB0CD1DB26BF3EEC784FCE166 /* TransformerKit.framework */,
+				6D5B41E5DFC034E94325C374C38C2785 /* NSValueTransformer+TransformerKit.h */,
+				1EF511D543154A3A28B0F3C571943772 /* NSValueTransformer+TransformerKit.m */,
 			);
-			name = Products;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		B23DF2E54AA8FD380D47766EE17213D2 /* TransformerKit */ = {
+		B1D7446AD1EAF191DDEEFA734D7C7C78 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BC2AAE42665518D18637536CAD5A897F /* Core */,
-				14B31BB6BA5F4C726740D2B5525F6092 /* Cryptography */,
-				BEA3B67C03622550E24B879A739200BE /* Date */,
-				3759269A3D388A3B55680E7D654F6EC6 /* Image */,
-				27E17B6836C078195961BE3FB1A02655 /* JSON */,
-				50E1D9DB6FADBAFD9DFD319BD3B28CE1 /* String */,
-				3235CF2D338FC1BE40346833291BA485 /* Support Files */,
+				FD9F2BEF7C08E39C53C59277227A2047 /* Foundation.framework */,
+				7987A8B241B8267BD7348F0CDFF5E6B3 /* Security.framework */,
 			);
-			path = TransformerKit;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B69EF32AC479346E100E47EF461F9F7F /* Dollar */ = {
+			isa = PBXGroup;
+			children = (
+				9370AC19A353EF8F4B83A9DB8B26EB4E /* AutoCurry.swift */,
+				45FA9F100D4F3A3E4583D8FDB0D09C29 /* Dollar.h */,
+				40441031CF565289A84B1A5DF0F2360B /* Dollar.swift */,
+				723DADE6070F7AFECD9C75502999192E /* Support Files */,
+			);
+			path = Dollar;
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -270,56 +398,62 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BC2AAE42665518D18637536CAD5A897F /* Core */ = {
+		B97BB49300B105A389FC2A7B7575CC2A /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				1699CDE2568364CAB2985ACE748F82C4 /* NSValueTransformer+TransformerKit.h */,
-				8FCEC71DDE60704833AD8FC5035AFD86 /* NSValueTransformer+TransformerKit.m */,
+				133550384374AF7781E60649AA8D1505 /* TTTJSONTransformer.h */,
+				DAEAB3609D6DE748F901A51AA32C40F4 /* TTTJSONTransformer.m */,
 			);
-			name = Core;
+			name = JSON;
 			sourceTree = "<group>";
 		};
-		BEA3B67C03622550E24B879A739200BE /* Date */ = {
+		C28244FFE1341279BF80C0C92AEF733C /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				E7ED767C1A3FDFB76C5E9F7160A169F8 /* TTTDateTransformers.h */,
-				143E37BC14A917B9C15843C4CFEB5090 /* TTTDateTransformers.m */,
+				712466CFCE8AC6342566466E6D890167 /* TTTDateTransformers.h */,
+				6EBAB4686313E096EF02AFEA41E14B79 /* TTTDateTransformers.m */,
 			);
 			name = Date;
 			sourceTree = "<group>";
 		};
-		C011EBDD36D6EC920AC5C8AF67DB8617 /* Pods */ = {
+		CBA18ED2821C5ED3A9E2C6B0EFE4214A /* InflectorKit */ = {
 			isa = PBXGroup;
 			children = (
-				F4ED48F54D69445762B5F74C82275441 /* InflectorKit */,
-				B23DF2E54AA8FD380D47766EE17213D2 /* TransformerKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F4ED48F54D69445762B5F74C82275441 /* InflectorKit */ = {
-			isa = PBXGroup;
-			children = (
-				D9899B4B506AFDA59721C979F9118628 /* NSString+InflectorKit.h */,
-				0D4E7217C4AA9D73D2E0BAD7C025A60E /* NSString+InflectorKit.m */,
-				FB43B9D40B5F40BFB206214296B71E5A /* TTTStringInflector.h */,
-				9C1734000CC51591F98250FAA9727F4C /* TTTStringInflector.m */,
-				92B28B9AA94998E666BF2B12CFCC1921 /* Support Files */,
+				381BB6617BB99497FBE570A20D4F9975 /* NSString+InflectorKit.h */,
+				F9170207661D8D9495111848057D2521 /* NSString+InflectorKit.m */,
+				138A27A0B9D45A71B8425278795290AC /* TTTStringInflector.h */,
+				10BBDAE8222B47EB9B32C77DEF4F97C8 /* TTTStringInflector.m */,
+				A38CC20295EFEDCFDD9835EF3D3ED317 /* Support Files */,
 			);
 			path = InflectorKit;
+			sourceTree = "<group>";
+		};
+		E69BD822B3F950629A96BB5BE788F6D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3223FFB60079B44EB0958B5D653C453 /* Dollar.framework */,
+				B1D7446AD1EAF191DDEEFA734D7C7C78 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1BEC56C4DFBCB861D6306635FF90142 /* TransformerKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE7B69725713060544F6DF03E314ADB9 /* Core */,
+				656F0122810D7097A82B032849418991 /* Cryptography */,
+				C28244FFE1341279BF80C0C92AEF733C /* Date */,
+				80781E2A40AE01C491D9472A0027AFFF /* Image */,
+				B97BB49300B105A389FC2A7B7575CC2A /* JSON */,
+				91F0DADA2DA752B6691DF4B1CBCF0BE5 /* String */,
+				315F47EA0E89C006B3BAF7E8682451EF /* Support Files */,
+			);
+			path = TransformerKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		173B0E55EE35D3E9CD11BB2418E39B6D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49CB236A7B0B72FA95189A74B1D0FC61 /* Pods-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2006246FE4480458C48570ACC64F16C5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,38 +464,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		980ACB74EA27C3BED101759EAC9BDC81 /* Headers */ = {
+		619F465FFFA0C59E201EF3B10FC2095B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6377BB90A8ACF97E563125C9B4575FD6 /* NSValueTransformer+TransformerKit.h in Headers */,
-				AEEA07FB17D706A4E0C251CFB67FDCE3 /* TransformerKit-umbrella.h in Headers */,
-				292EBB9837AC537A33EDC7047875DA0D /* TTTCryptographyTransformers.h in Headers */,
-				3BE828C91ECA3D345C090A8F9446D4BE /* TTTDateTransformers.h in Headers */,
-				3EF389A5D8428D65768A4BE68C9471DA /* TTTImageTransformers.h in Headers */,
-				FD382F1BB75D597925575F52C1B98A5F /* TTTJSONTransformer.h in Headers */,
-				98A86EB830112B32A1331CE136E4B9AB /* TTTStringTransformers.h in Headers */,
+				4473ABBAE3EDF34C8A6FF863FD24658B /* NSValueTransformer+TransformerKit.h in Headers */,
+				DC22E5133BD710BB755D5224CF838FC6 /* TransformerKit-umbrella.h in Headers */,
+				9BAFDD324C40DEEF6442231FDC8D4518 /* TTTCryptographyTransformers.h in Headers */,
+				AB064862BD6DA2F4295CA303DCA4C7BF /* TTTDateTransformers.h in Headers */,
+				C7AC429A2F8566D9C746B08DA1D9096E /* TTTImageTransformers.h in Headers */,
+				5A604271E2706BC989EB696415E08573 /* TTTJSONTransformer.h in Headers */,
+				BE70EE512AB0E64778FB166DF19390D6 /* TTTStringTransformers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67016EEEC4A9E071E0A709B27A5B0CF2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4DDF1F03B799E8FD3D35AE2CE00813 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33D73D2B850C3A63DB101ECFE3401FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A31A1B68643CD80CB744D6C51D63230 /* Dollar-umbrella.h in Headers */,
+				733867F45741D2305F5C469F53C7425C /* Dollar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F729F3E92732EB008E81FDBD2674E9D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CCFAC9AFFA63357E2AC12EAA55A8756 /* Cent-umbrella.h in Headers */,
+				E568CC1C4E497794D8790EA8BD58FBC3 /* Cent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3532EAA4AFBC52E2896EA88B4360B635 /* TransformerKit */ = {
+		21981BD422205F07E3594868193146EE /* Dollar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08028B6723401CE37F1CD00E56631227 /* Build configuration list for PBXNativeTarget "TransformerKit" */;
+			buildConfigurationList = DECB0754B2A3C235B98AA8B0598C57AB /* Build configuration list for PBXNativeTarget "Dollar" */;
 			buildPhases = (
-				6F5B1BF24125C37A1C6877F4209924CE /* Sources */,
-				E23D11CEF3DCA60F5601539E3DAE770C /* Frameworks */,
-				980ACB74EA27C3BED101759EAC9BDC81 /* Headers */,
+				FB700C30350A800A1799665AEA2477A3 /* Sources */,
+				34DD07F4AACEFA7D8A892D1065235EF9 /* Frameworks */,
+				B33D73D2B850C3A63DB101ECFE3401FD /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TransformerKit;
-			productName = TransformerKit;
-			productReference = EB245D6FB0CD1DB26BF3EEC784FCE166 /* TransformerKit.framework */;
+			name = Dollar;
+			productName = Dollar;
+			productReference = C7A83BF10AC546CDBFCD216E42F3ADCD /* Dollar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3FC04E21C6CFEF1BAAE87FBB72AC6C6F /* InflectorKit */ = {
@@ -378,26 +538,63 @@
 			);
 			name = InflectorKit;
 			productName = InflectorKit;
-			productReference = ED796F54CF514EE19C36F66DE006204E /* InflectorKit.framework */;
+			productReference = 394E174E6B71595ACF5F661B791D87A2 /* InflectorKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B103875200419F02B483349364F8E658 /* Pods */ = {
+		4E307F847AC3BEDF2FA9B74017BB9908 /* Cent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46CE93DF374726E4A481C9708777419C /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = A0909393C08689EA718B8643E4F777B3 /* Build configuration list for PBXNativeTarget "Cent" */;
 			buildPhases = (
-				8C97D1C81BBC20978872B8A81E1112AA /* Sources */,
-				E652A768540A5620E3635A886308E93F /* Frameworks */,
-				173B0E55EE35D3E9CD11BB2418E39B6D /* Headers */,
+				1BCCE37844A2ED8A1D42985DDC9F8836 /* Sources */,
+				B20574A1398B3840E0251A73F8F31D15 /* Frameworks */,
+				F729F3E92732EB008E81FDBD2674E9D1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				64EF5759EC918DCA62F7796C3FA91C6F /* PBXTargetDependency */,
-				EFE071325541E9B2847DEA7BE15A58EF /* PBXTargetDependency */,
+				CEF7C6EFE18579B9DCAA77896D89607B /* PBXTargetDependency */,
+			);
+			name = Cent;
+			productName = Cent;
+			productReference = 13BC7D9763DB7BC35BD2101612F9474E /* Cent.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9A15D6AB22C535189E0BDDBA1032A6D /* TransformerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 595F985857FDBE0342EA0289D7849D27 /* Build configuration list for PBXNativeTarget "TransformerKit" */;
+			buildPhases = (
+				349F665161DAC85A227FB66EBEB12DB1 /* Sources */,
+				5DAE8FF10278D17C63D9214CE0CD024F /* Frameworks */,
+				619F465FFFA0C59E201EF3B10FC2095B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransformerKit;
+			productName = TransformerKit;
+			productReference = E064F29D956C841F7218BEECCE4015F0 /* TransformerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F5137263941975EBFCE6A0AC8082281B /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C0CDA4A82155F7CCDAAE80DBDF66392 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				BA4DDAEE76075D00B595873540EC8C68 /* Sources */,
+				95D12D8D9FF6D6A5800817FBDF7EE3AA /* Frameworks */,
+				67016EEEC4A9E071E0A709B27A5B0CF2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEBA85D4259788E2D49F306FC656CCE1 /* PBXTargetDependency */,
+				12EDBABD09CC0AB234498EF20EFB6C60 /* PBXTargetDependency */,
+				D9F3F9F722F9BCFAB6A089FE5743D8D1 /* PBXTargetDependency */,
+				D578E0BC2D3456AF64A62410312EFAA2 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = E5DE6CEF72A43431D335D03C847A7FBA /* Pods.framework */;
+			productReference = 26BC34C48932E7BE56C01815F00A7DE9 /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -417,18 +614,49 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A8E7340C3E9FEAC9316AE18475A8AB5E /* Products */;
+			productRefGroup = 7BBAF6B0DF55A1274C43CE70EA3300F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				4E307F847AC3BEDF2FA9B74017BB9908 /* Cent */,
+				21981BD422205F07E3594868193146EE /* Dollar */,
 				3FC04E21C6CFEF1BAAE87FBB72AC6C6F /* InflectorKit */,
-				B103875200419F02B483349364F8E658 /* Pods */,
-				3532EAA4AFBC52E2896EA88B4360B635 /* TransformerKit */,
+				F5137263941975EBFCE6A0AC8082281B /* Pods */,
+				B9A15D6AB22C535189E0BDDBA1032A6D /* TransformerKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1BCCE37844A2ED8A1D42985DDC9F8836 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEBDAAD6FE95EC983933A27E0F0A7458 /* Array.swift in Sources */,
+				7F1E84368DF596D80FF73923B7B793E1 /* Cent-dummy.m in Sources */,
+				9399BDD2CE57F45998378DB886A43ED7 /* Date.swift in Sources */,
+				83F5CDD8665551B838069990A4C9909C /* Dictionary.swift in Sources */,
+				AD520382254F807C11A3E7BD1997681F /* Int.swift in Sources */,
+				881CB7FCCFA6173F4BEDE23803D75B72 /* Range.swift in Sources */,
+				33D45F781689572FA5F7B2B18BA69ED5 /* Regex.swift in Sources */,
+				A6F453A540F3FC35E0549275D6561044 /* String.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		349F665161DAC85A227FB66EBEB12DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AB92AE0648C265FF56FFDE8705D377 /* NSValueTransformer+TransformerKit.m in Sources */,
+				23C35803D67738B306FCAC9254F2D0EC /* TransformerKit-dummy.m in Sources */,
+				7BB02FB8A2F34307B0E552FC4CB51A07 /* TTTCryptographyTransformers.m in Sources */,
+				113330AEF3C9EE22FC23866DBD49D42F /* TTTDateTransformers.m in Sources */,
+				5D14D9D561A0CD6DF1217C11CFEF6BDC /* TTTImageTransformers.m in Sources */,
+				5C3F3A3FA70C07D311688211F2CD98DE /* TTTJSONTransformer.m in Sources */,
+				0CE6B4F3E03B6945A960002C1BFF128E /* TTTStringTransformers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		655FD1334A626DFD6F8BEAD50ED44973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,49 +667,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F5B1BF24125C37A1C6877F4209924CE /* Sources */ = {
+		BA4DDAEE76075D00B595873540EC8C68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AFF13B5B35284EA564698EF837AFBC /* NSValueTransformer+TransformerKit.m in Sources */,
-				27CB0016508B08BBF53EDC43EE2F40D2 /* TransformerKit-dummy.m in Sources */,
-				5DF886F9203A3E99ED571A4AA69F187E /* TTTCryptographyTransformers.m in Sources */,
-				658F9FA68479569466A4812F37EC2A66 /* TTTDateTransformers.m in Sources */,
-				838E43C4A5568B005581CCCC050F7325 /* TTTImageTransformers.m in Sources */,
-				9E2E79EECA9762558094C0FDDD34FA15 /* TTTJSONTransformer.m in Sources */,
-				F898439018FB27D7F40C15E763EA04F3 /* TTTStringTransformers.m in Sources */,
+				EF1ACC4A58BE3F8D57DEEC112FD641FC /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C97D1C81BBC20978872B8A81E1112AA /* Sources */ = {
+		FB700C30350A800A1799665AEA2477A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE47D96EF831B22DD8117ED1DD0EEA2 /* Pods-dummy.m in Sources */,
+				6CEB181C3D5D3A19AE5CC9D617913866 /* AutoCurry.swift in Sources */,
+				33740FDFC1EF0E6BC8D06A673C2019E7 /* Dollar-dummy.m in Sources */,
+				1BF2D74AE82E965D23F5D021D152246E /* Dollar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		64EF5759EC918DCA62F7796C3FA91C6F /* PBXTargetDependency */ = {
+		12EDBABD09CC0AB234498EF20EFB6C60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dollar;
+			target = 21981BD422205F07E3594868193146EE /* Dollar */;
+			targetProxy = D550860457D3FAD1736A6FE313DDAD13 /* PBXContainerItemProxy */;
+		};
+		CEF7C6EFE18579B9DCAA77896D89607B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dollar;
+			target = 21981BD422205F07E3594868193146EE /* Dollar */;
+			targetProxy = 6DB447B6ADECE33781522DBBFAE513F1 /* PBXContainerItemProxy */;
+		};
+		D578E0BC2D3456AF64A62410312EFAA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TransformerKit;
+			target = B9A15D6AB22C535189E0BDDBA1032A6D /* TransformerKit */;
+			targetProxy = 7ADF101F99EE7C531DAB868948DD13AC /* PBXContainerItemProxy */;
+		};
+		D9F3F9F722F9BCFAB6A089FE5743D8D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = InflectorKit;
 			target = 3FC04E21C6CFEF1BAAE87FBB72AC6C6F /* InflectorKit */;
-			targetProxy = EDDB69F26416C372DF22066F24324581 /* PBXContainerItemProxy */;
+			targetProxy = 11EE6A6566FD5AF288F995CBD9D56F71 /* PBXContainerItemProxy */;
 		};
-		EFE071325541E9B2847DEA7BE15A58EF /* PBXTargetDependency */ = {
+		EEBA85D4259788E2D49F306FC656CCE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TransformerKit;
-			target = 3532EAA4AFBC52E2896EA88B4360B635 /* TransformerKit */;
-			targetProxy = F7E7144941B2E0EF05D862981FFCB290 /* PBXContainerItemProxy */;
+			name = Cent;
+			target = 4E307F847AC3BEDF2FA9B74017BB9908 /* Cent */;
+			targetProxy = B2DC53F1EE26CF2F171EF648E3A89983 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5468AD11B4EDAB280F6F41134E65B299 /* Release */ = {
+		3E4C42186E5A46962800107042A8DF73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B263EC8E9C5B22E57B1374B674B25FC /* TransformerKit.xcconfig */;
+			baseConfigurationReference = 4EF7E730C46BD5723BCC7138EFE1C03F /* TransformerKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -506,7 +748,34 @@
 			};
 			name = Release;
 		};
-		8CBE57AC57575E16CF9E24C0ADB095A5 /* Release */ = {
+		3EE9B3FE7276C882E782BB4336F66466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61BF60E09734B66BBE0BDCFEAF240165 /* Dollar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Dollar/Dollar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Dollar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Dollar/Dollar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Dollar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		49BBC5C444D370AC5B61DA69D7EA3595 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
 			buildSettings = {
@@ -528,6 +797,92 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A440172D218E9BFEA5135E34231F4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E9AAA579CD56275FCDA1519C28F7DF /* Cent.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cent/Cent-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cent/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cent/Cent.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cent;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5064E5D620DBD319B59601DD1A73A18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CB639C1A7F657F67E45562B1C8DBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E9AAA579CD56275FCDA1519C28F7DF /* Cent.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cent/Cent-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cent/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cent/Cent.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cent;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -575,36 +930,9 @@
 			};
 			name = Debug;
 		};
-		B7C2E608B5F90AC4CE7D98C542F67CF3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B263EC8E9C5B22E57B1374B674B25FC /* TransformerKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TransformerKit/TransformerKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TransformerKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TransformerKit/TransformerKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TransformerKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		CA11B5D6886A82254A7AE17724D9B8DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F7103B624941CDF674F2B054B6E2A71 /* InflectorKit.xcconfig */;
+			baseConfigurationReference = 641B30D32CE4D5F8E108CB8E30EB67E0 /* InflectorKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -629,9 +957,9 @@
 			};
 			name = Debug;
 		};
-		E92E240A666980F8AF12510738ED812A /* Debug */ = {
+		E0F771CC2873BE1E0C0DB6E67A835E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4EF7E730C46BD5723BCC7138EFE1C03F /* TransformerKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -640,17 +968,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TransformerKit/TransformerKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransformerKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TransformerKit/TransformerKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				PRODUCT_NAME = TransformerKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -693,9 +1018,37 @@
 			};
 			name = Release;
 		};
+		FC4DA2A312552CCB6EF563897131A6EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61BF60E09734B66BBE0BDCFEAF240165 /* Dollar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Dollar/Dollar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Dollar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Dollar/Dollar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Dollar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		FE88835D4EA86E3D4EDBC36F1F96539F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F7103B624941CDF674F2B054B6E2A71 /* InflectorKit.xcconfig */;
+			baseConfigurationReference = 641B30D32CE4D5F8E108CB8E30EB67E0 /* InflectorKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -723,20 +1076,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08028B6723401CE37F1CD00E56631227 /* Build configuration list for PBXNativeTarget "TransformerKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7C2E608B5F90AC4CE7D98C542F67CF3 /* Debug */,
-				5468AD11B4EDAB280F6F41134E65B299 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0B839F8D21C0122623FC54E9B2935C58 /* Build configuration list for PBXNativeTarget "InflectorKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA11B5D6886A82254A7AE17724D9B8DF /* Debug */,
 				FE88835D4EA86E3D4EDBC36F1F96539F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C0CDA4A82155F7CCDAAE80DBDF66392 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5064E5D620DBD319B59601DD1A73A18F /* Debug */,
+				49BBC5C444D370AC5B61DA69D7EA3595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -750,11 +1103,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46CE93DF374726E4A481C9708777419C /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		595F985857FDBE0342EA0289D7849D27 /* Build configuration list for PBXNativeTarget "TransformerKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E92E240A666980F8AF12510738ED812A /* Debug */,
-				8CBE57AC57575E16CF9E24C0ADB095A5 /* Release */,
+				E0F771CC2873BE1E0C0DB6E67A835E20 /* Debug */,
+				3E4C42186E5A46962800107042A8DF73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0909393C08689EA718B8643E4F777B3 /* Build configuration list for PBXNativeTarget "Cent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A440172D218E9BFEA5135E34231F4FB /* Debug */,
+				7CB639C1A7F657F67E45562B1C8DBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DECB0754B2A3C235B98AA8B0598C57AB /* Build configuration list for PBXNativeTarget "Dollar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4DA2A312552CCB6EF563897131A6EA /* Debug */,
+				3EE9B3FE7276C882E782BB4336F66466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

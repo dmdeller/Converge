@@ -84,10 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/Cent.framework"
+  install_framework "Pods/Dollar.framework"
   install_framework "Pods/InflectorKit.framework"
   install_framework "Pods/TransformerKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/Cent.framework"
+  install_framework "Pods/Dollar.framework"
   install_framework "Pods/InflectorKit.framework"
   install_framework "Pods/TransformerKit.framework"
 fi
