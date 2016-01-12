@@ -20,6 +20,8 @@
 		4E1427171C4449C6000E223F /* TestEntityTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427111C4449C6000E223F /* TestEntityTwo.swift */; };
 		4E1427181C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427121C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift */; };
 		4E1427191C4449C6000E223F /* TestEntityOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1427131C4449C6000E223F /* TestEntityOne.swift */; };
+		4E92FAF01C4587D1008D9F51 /* Record+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92FAEF1C4587D1008D9F51 /* Record+Mapping.swift */; };
+		4EB02F581C45915D00C94E5B /* Record+Merging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB02F571C45915D00C94E5B /* Record+Merging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4E1427111C4449C6000E223F /* TestEntityTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntityTwo.swift; sourceTree = "<group>"; };
 		4E1427121C4449C6000E223F /* TestEntityOne+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestEntityOne+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4E1427131C4449C6000E223F /* TestEntityOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntityOne.swift; sourceTree = "<group>"; };
+		4E92FAEF1C4587D1008D9F51 /* Record+Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Record+Mapping.swift"; sourceTree = "<group>"; };
+		4EB02F571C45915D00C94E5B /* Record+Merging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Record+Merging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				4E1426EC1C441FC6000E223F /* Converge.h */,
 				4E1426EE1C441FC6000E223F /* Info.plist */,
 				4E1427031C442072000E223F /* Record.swift */,
+				4E92FAEF1C4587D1008D9F51 /* Record+Mapping.swift */,
+				4EB02F571C45915D00C94E5B /* Record+Merging.swift */,
 				4E1427051C4422D3000E223F /* Importer.swift */,
 			);
 			path = Converge;
@@ -233,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E92FAF01C4587D1008D9F51 /* Record+Mapping.swift in Sources */,
 				4E1427041C442072000E223F /* Record.swift in Sources */,
+				4EB02F581C45915D00C94E5B /* Record+Merging.swift in Sources */,
 				4E1427061C4422D3000E223F /* Importer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
