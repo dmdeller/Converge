@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char ConvergeVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Converge/PublicHeader.h>
 
 
+#import <TransformerKit/TTTStringTransformers.h>
+#import <InflectorKit/TTTStringInflector.h>

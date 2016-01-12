@@ -128,18 +128,8 @@ public class Record: NSManagedObject {
             var predicates: [NSPredicate] = []
             
             for (attributeName, value) in conditions {
-                // NSPredicate.init(format, argumentArray) specifies argumentArray as [AnyObject], which means the array can't contain nil, even though that would be a perfectly cromulent predicate.
-                // So, let's stick an NSNull in there like it's 1999
-                let wrappedValue: AnyObject = {
-                    if value == nil {
-                        return NSNull()
-                    } else {
-                        return value!
-                    }
-                }()
-                
                 // This is a little bit crazy... you can't pass the attribute name in as an argument to predicateWithFormat:, so we're formatting the string twice...
-                let predicate = NSPredicate(format: "\(attributeName) == %@", argumentArray: [wrappedValue])
+                let predicate = NSPredicate(format: "\(attributeName) == %@", argumentArray: [value])
                 predicates.append(predicate)
             }
             
@@ -354,7 +344,7 @@ public class Record: NSManagedObject {
     
     // MARK: - Relationship info
     
-    public class func classForRelationshipName(relationshipName: String, context: NSManagedObjectContext) -> AnyClass {
+    public class func classForRelationshipName(relationshipName: String, context: NSManagedObjectContext) -> Record.Type {
         
         let entity = self.entity(inManagedObjectContext: context)
         let relationships = entity.relationshipsByName
@@ -364,7 +354,7 @@ public class Record: NSManagedObject {
             fatalError("\(self.self): Relationship not found: \(relationshipName) for entity: \(self.self)")
         }
         
-        return NSClassFromString(relationship!.destinationEntity!.managedObjectClassName)!
+        return NSClassFromString(relationship!.destinationEntity!.managedObjectClassName)! as! Record.Type
     }
     
 }
