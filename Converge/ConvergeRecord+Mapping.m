@@ -29,7 +29,7 @@
     }
     else
     {
-        return @"id";
+        return self.IDAttributeName;
     }
 }
 
