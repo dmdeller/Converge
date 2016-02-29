@@ -35,4 +35,6 @@ typedef enum
 - (AFHTTPRequestOperation *)sendNewRecord:(ConvergeRecord *)record parameters:(NSDictionary *)parameters success:(ConvergeSuccessBlock)success failure:(ConvergeFailureBlock)failure;
 - (AFHTTPRequestOperation *)sendUpdatedRecord:(ConvergeRecord *)record parameters:(NSDictionary *)parameters success:(ConvergeSuccessBlock)success failure:(ConvergeFailureBlock)failure;
 
+- (NSURL *)requestTimestampsFileURL;
+
 @end
