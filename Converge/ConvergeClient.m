@@ -32,6 +32,7 @@
     {
         _context = context;
         _trackModifiedTimes = NO;
+        _requestTimestamps = NSMutableDictionary.new;
         
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     }
@@ -550,7 +551,7 @@
         }
     }
     
-    self.requestTimestamps = [NSMutableDictionary dictionaryWithCapacity:10];
+    self.requestTimestamps = NSMutableDictionary.new;
 }
 
 + (NSString *)RFC2822StringForDate:(NSDate *)date
