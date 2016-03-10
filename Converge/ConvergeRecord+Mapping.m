@@ -42,7 +42,7 @@
     NSValueTransformer *snakeCaseTransformer = [NSValueTransformer valueTransformerForName:TTTSnakeCaseStringTransformerName];
     
     return [NSString stringWithFormat:@"/%@",
-            [TTTStringInflector.defaultInflector pluralize:[snakeCaseTransformer transformedValue:[camelCaseTransformer reverseTransformedValue:NSStringFromClass(self.class)]]]];
+            [TTTStringInflector.defaultInflector pluralize:[snakeCaseTransformer transformedValue:[camelCaseTransformer reverseTransformedValue:self.entityName]]]];
 }
 
 /**
@@ -54,7 +54,7 @@
     NSValueTransformer *snakeCaseTransformer = [NSValueTransformer valueTransformerForName:TTTSnakeCaseStringTransformerName];
     
     return [NSString stringWithFormat:@"/%@/%@",
-            [TTTStringInflector.defaultInflector pluralize:[snakeCaseTransformer transformedValue:[camelCaseTransformer reverseTransformedValue:NSStringFromClass(self.class)]]],
+            [TTTStringInflector.defaultInflector pluralize:[snakeCaseTransformer transformedValue:[camelCaseTransformer reverseTransformedValue:self.entityName]]],
             recordID];
 }
 
