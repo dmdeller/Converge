@@ -298,14 +298,15 @@
          {
              [self.backgroundContext performBlock:^
               {
-                  NSString *IDAttributeName = [recordClass IDAttributeName];
+                  id IDAttributeName = [recordClass IDAttributeName];
+                  id providerIDAttributeName = [recordClass providerIDAttributeName];
                   NSDictionary *properties = nil;
                   if (IDAttributeName != nil)
                   {
                       // Use record ID provided by server, if possible; the server may be providing us with a corrected ID in response
-                      if ([responseObject isKindOfClass:NSDictionary.class] && TCKNullToNil([responseObject valueForKey:IDAttributeName]) != nil)
+                      if ([responseObject isKindOfClass:NSDictionary.class] && TCKNullToNil([responseObject valueForKey:providerIDAttributeName]) != nil)
                       {
-                          properties = @{IDAttributeName: [responseObject valueForKey:IDAttributeName]};
+                          properties = @{IDAttributeName: [responseObject valueForKey:providerIDAttributeName]};
                       }
                       // Otherwise, use record ID originally passed into this method, if possible
                       else if ([recordClass value:recordID isCorrectClassForAttributeName:IDAttributeName inContext:self.backgroundContext])
