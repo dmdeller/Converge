@@ -418,7 +418,11 @@
 
 - (AFHTTPRequestOperation *)sendRecord:(ConvergeRecord *)record toURLPath:(NSString *)path HTTPMethod:(NSString *)method parameters:(NSDictionary *)parameters success:(ConvergeSuccessBlock)success failure:(ConvergeFailureBlock)failure
 {
-    NSDictionary *recordParams = @{TCKNilToNull([record.class providerClassName]): TCKNilToNull(record.providerDictionary)};
+    NSDictionary *recordParams = record.providerDictionary;
+    if ([record.class shouldWrapRequestBody])
+    {
+        recordParams = @{TCKNilToNull([record.class providerClassName]): TCKNilToNull(recordParams)};
+    }
     
     NSMutableDictionary *combinedParams = NSMutableDictionary.new;
     [combinedParams addEntriesFromDictionary:parameters];

@@ -94,6 +94,20 @@
     return @{};
 }
 
+/**
+ * When sending a new or updated record (as POST or PATCH, respectively), this method determines whether or not to wrap the record data in outer object with the entity name.
+ * 
+ * YES example:
+ * {"record": {"foo": 1, "bar": 2}}
+ *
+ * NO example:
+ * {"foo": 1, "bar" 2}
+ */
++ (BOOL)shouldWrapRequestBody
+{
+    return YES;
+}
+
 #pragma mark - Mapping Logic
 
 + (NSDictionary *)attributeMapForProviderKeys:(NSArray *)providerKeys context:(NSManagedObjectContext *)context

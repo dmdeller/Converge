@@ -18,6 +18,7 @@
 + (NSDictionary *)attributeMap;
 + (NSDictionary *)foreignKeyMap;
 + (NSDictionary *)relationshipMap;
++ (BOOL)shouldWrapRequestBody;
 
 /// @name Mapping
 + (NSDictionary *)attributeMapForProviderKeys:(NSArray *)providerKeys context:(NSManagedObjectContext *)context;
