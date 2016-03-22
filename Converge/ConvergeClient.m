@@ -129,7 +129,7 @@
                                {
                                    [self.context rollback];
                                    NSLog(@"%@ (FOREGROUND): core data error when saving %@: %@", self.class, recordClass, [foregroundError userInfo]);
-                                   if (failure != nil) failure(operation, foregroundError);
+                                   if (failure != nil) failure(operation, [self errorForOperation:operation error:foregroundError]);
                                }
                            }];
                       }
@@ -139,7 +139,7 @@
                            {
                                [self.backgroundContext rollback];
                                NSLog(@"%@ (BACKGROUND): core data error when saving %@: %@", self.class, recordClass, [backgroundError userInfo]);
-                               if (failure != nil) failure(operation, backgroundError);
+                               if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                            }];
                       }
                   }
@@ -149,7 +149,7 @@
                        {
                            [self.backgroundContext rollback];
                            NSLog(@"%@ (BACKGROUND): error when merging %@: %@", self.class, recordClass, [backgroundError userInfo]);
-                           if (failure != nil) failure(operation, backgroundError);
+                           if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                        }];
                   }
               }];
@@ -159,10 +159,13 @@
              NSLog(@"%@: No data received in response", self.class);
              
              NSError *error = [NSError errorWithDomain:ConvergeClientErrorDomain code:ConvergeClientErrorEmptyResponse userInfo:@{ConvergeClientErrorInfoOperation: TCKNilToNull(operation)}];
-             if (failure != nil) failure(operation, error);
+             if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
          }
      }
-    failure:failure];
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
+     }];
     
     [self.requestSerializer setValue:nil forHTTPHeaderField:@"If-Modified-Since"];
     
@@ -228,7 +231,7 @@
                                {
                                    [self.context rollback];
                                    NSLog(@"%@ (FOREGROUND): core data error when saving %@: %@", self.class, record.class, [foregroundError userInfo]);
-                                   if (failure != nil) failure(operation, foregroundError);
+                                   if (failure != nil) failure(operation, [self errorForOperation:operation error:foregroundError]);
                                }
                            }];
                       }
@@ -238,7 +241,7 @@
                            {
                                [self.backgroundContext rollback];
                                NSLog(@"%@ (BACKGROUND): core data error when saving %@: %@", self.class, record.class, [backgroundError userInfo]);
-                               if (failure != nil) failure(operation, backgroundError);
+                               if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                            }];
                       }
                   }
@@ -248,7 +251,7 @@
                        {
                            [self.backgroundContext rollback];
                            NSLog(@"%@ (BACKGROUND): error when merging %@: %@", self.class, record.class, [backgroundError userInfo]);
-                           if (failure != nil) failure(operation, backgroundError);
+                           if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                        }];
                   }
               }];
@@ -258,10 +261,13 @@
              NSLog(@"%@: No data received in response", self.class);
              
              NSError *error = [NSError errorWithDomain:ConvergeClientErrorDomain code:ConvergeClientErrorEmptyResponse userInfo:@{ConvergeClientErrorInfoOperation: TCKNilToNull(operation)}];
-             if (failure != nil) failure(operation, error);
+             if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
          }
      }
-    failure:failure];
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
+     }];
     
     [self.requestSerializer setValue:nil forHTTPHeaderField:@"If-Modified-Since"];
     
@@ -349,7 +355,7 @@
                                    {
                                        [self.context rollback];
                                        NSLog(@"%@ (FOREGROUND): core data error when saving %@: %@", self.class, recordClass, [foregroundError userInfo]);
-                                       if (failure != nil) failure(operation, foregroundError);
+                                       if (failure != nil) failure(operation, [self errorForOperation:operation error:foregroundError]);
                                    }
                                }];
                           }
@@ -359,7 +365,7 @@
                                {
                                    [self.backgroundContext rollback];
                                    NSLog(@"%@ (BACKGROUND): core data error when saving %@: %@", self.class, recordClass, [backgroundError userInfo]);
-                                   if (failure != nil) failure(operation, backgroundError);
+                                   if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                                }];
                           }
                       }
@@ -369,7 +375,7 @@
                            {
                                [self.backgroundContext rollback];
                                NSLog(@"%@ (BACKGROUND): error when merging %@: %@", self.class, recordClass, [backgroundError userInfo]);
-                               if (failure != nil) failure(operation, backgroundError);
+                               if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                            }];
                       }
                   }
@@ -379,7 +385,7 @@
                        {
                            [self.backgroundContext rollback];
                            NSLog(@"%@ (BACKGROUND): error when creating %@: %@", self.class, recordClass, [backgroundError userInfo]);
-                           if (failure != nil) failure(operation, backgroundError);
+                           if (failure != nil) failure(operation, [self errorForOperation:operation error:backgroundError]);
                        }];
                   }
               }];
@@ -389,10 +395,13 @@
              NSLog(@"%@: No data received in response", self.class);
              
              NSError *error = [NSError errorWithDomain:ConvergeClientErrorDomain code:ConvergeClientErrorEmptyResponse userInfo:@{ConvergeClientErrorInfoOperation: TCKNilToNull(operation)}];
-             if (failure != nil) failure(operation, error);
+             if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
          }
      }
-    failure:failure];
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
+     }];
     
     [self.requestSerializer setValue:nil forHTTPHeaderField:@"If-Modified-Since"];
     
@@ -443,7 +452,7 @@
              {
                  [self.context rollback];
                  NSLog(@"%@ (FOREGROUND): provider accepted sent %@, but saving changes to core data failed! error: %@", self.class, NSStringFromClass([record class]), [foregroundError userInfo]);
-                 if (failure != nil) failure(operation, foregroundError);
+                 if (failure != nil) failure(operation, [self errorForOperation:operation error:foregroundError]);
              }
          }
          else
@@ -470,19 +479,22 @@
                       {
                           [self.context rollback];
                           NSLog(@"%@ (FOREGROUND): provider accepted sent %@, but saving changes to core data failed! error: %@", self.class, NSStringFromClass([record class]), [foregroundError userInfo]);
-                          if (failure != nil) failure(operation, foregroundError);
+                          if (failure != nil) failure(operation, [self errorForOperation:operation error:foregroundError]);
                       }
                   }
                   else
                   {
                       [self.context rollback];
                       NSLog(@"%@ (FOREGROUND): error when merging %@: %@", self.class, [record class], [foregroundError userInfo]);
-                      if (failure != nil) failure(operation, foregroundError);
+                      if (failure != nil) failure(operation, [self errorForOperation:operation error:foregroundError]);
                   }
               }];
          }
      }
-    failure:failure];
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
+     }];
     
     [self.operationQueue addOperation:operation];
     
@@ -514,6 +526,18 @@
     }
 
     return [self HTTPRequestOperationWithRequest:request success:success failure:failure];
+}
+
+#pragma mark -
+
+/**
+ * Subclasses can override this method if they wish for the client to return a different error in a ConvergeFailureBlock when AFNetworking encounters a failure.
+ *
+ * When `error` is non-nil, this method must not return nil.
+ */
+- (NSError *)errorForOperation:(AFHTTPRequestOperation *)operation error:(NSError *)error
+{
+    return error;
 }
 
 #pragma mark - Tracking Modified Times
