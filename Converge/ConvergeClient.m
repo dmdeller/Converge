@@ -17,7 +17,6 @@
 
 @interface ConvergeClient ()
 
-@property NSManagedObjectContext *context;
 @property (nonatomic) NSManagedObjectContext *backgroundContext;
 @property NSMutableDictionary *requestTimestamps;
 
@@ -40,6 +39,14 @@
 }
 
 #pragma mark -
+
+- (void)setContext:(NSManagedObjectContext *)context
+{
+    _context = context;
+    
+    // Background context depends on this context; so if the latter changes, we need to recreate the former
+    self.backgroundContext = nil;
+}
 
 /**
  * Using a private queue context so as not to block the main thread during resource-intensive core data operations.

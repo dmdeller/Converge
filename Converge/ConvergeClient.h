@@ -23,7 +23,7 @@ typedef enum
 
 @interface ConvergeClient : AFHTTPRequestOperationManager
 
-@property (readonly) NSManagedObjectContext *context;
+@property (nonatomic) NSManagedObjectContext *context;
 @property BOOL trackModifiedTimes;
 
 - (instancetype)initWithBaseURL:(NSURL *)url context:(NSManagedObjectContext *)context;
