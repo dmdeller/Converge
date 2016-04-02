@@ -11,9 +11,11 @@ extern const struct TestEntityTwoAttributes {
 } TestEntityTwoAttributes;
 
 extern const struct TestEntityTwoRelationships {
+	__unsafe_unretained NSString *testEntityFour;
 	__unsafe_unretained NSString *testEntityOne;
 } TestEntityTwoRelationships;
 
+@class TestEntityFour;
 @class TestEntityOne;
 
 @interface TestEntityTwoID : NSManagedObjectID {}
@@ -41,6 +43,10 @@ extern const struct TestEntityTwoRelationships {
 
 //- (BOOL)validateSomeDecimal:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) TestEntityFour *testEntityFour;
+
+//- (BOOL)validateTestEntityFour:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) TestEntityOne *testEntityOne;
 
 //- (BOOL)validateTestEntityOne:(id*)value_ error:(NSError**)error_;
@@ -60,6 +66,9 @@ extern const struct TestEntityTwoRelationships {
 
 - (NSDecimalNumber*)primitiveSomeDecimal;
 - (void)setPrimitiveSomeDecimal:(NSDecimalNumber*)value;
+
+- (TestEntityFour*)primitiveTestEntityFour;
+- (void)setPrimitiveTestEntityFour:(TestEntityFour*)value;
 
 - (TestEntityOne*)primitiveTestEntityOne;
 - (void)setPrimitiveTestEntityOne:(TestEntityOne*)value;

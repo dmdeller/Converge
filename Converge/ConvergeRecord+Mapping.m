@@ -118,7 +118,10 @@
      }
     context:context].mutableCopy;
     
-    map[self.IDAttributeName] = self.providerIDAttributeName;
+    if (self.IDAttributeName != nil)
+    {
+        map[self.IDAttributeName] = self.providerIDAttributeName;
+    }
     
     return map.immutableCopy_tc;
 }

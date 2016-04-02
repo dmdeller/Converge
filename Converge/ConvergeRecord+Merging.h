@@ -48,6 +48,8 @@ typedef id (^ConvergeAttributeConversionBlock)(id value);
 
 + (BOOL)shouldExportAttribute:(NSString *)attributeName;
 
++ (BOOL)shouldAlwaysCreateNew;
+
 + (ConvergeAttributeConversionBlock)conversionForAttribute:(NSString *)ourAttributeName;
 + (ConvergeAttributeConversionBlock)reverseConversionForAttribute:(NSString *)ourAttributeName;
 

@@ -10,6 +10,7 @@ const struct TestEntityThreeAttributes TestEntityThreeAttributes = {
 };
 
 const struct TestEntityThreeRelationships TestEntityThreeRelationships = {
+	.testEntityFours = @"testEntityFours",
 	.testEntityOnes = @"testEntityOnes",
 };
 
@@ -95,6 +96,17 @@ const struct TestEntityThreeRelationships TestEntityThreeRelationships = {
 
 @dynamic someString;
 
+@dynamic testEntityFours;
+
+- (NSMutableOrderedSet*)testEntityFoursSet {
+	[self willAccessValueForKey:@"testEntityFours"];
+
+	NSMutableOrderedSet *result = (NSMutableOrderedSet*)[self mutableOrderedSetValueForKey:@"testEntityFours"];
+
+	[self didAccessValueForKey:@"testEntityFours"];
+	return result;
+}
+
 @dynamic testEntityOnes;
 
 - (NSMutableOrderedSet*)testEntityOnesSet {
@@ -106,6 +118,66 @@ const struct TestEntityThreeRelationships TestEntityThreeRelationships = {
 	return result;
 }
 
+@end
+
+@implementation _TestEntityThree (TestEntityFoursCoreDataGeneratedAccessors)
+- (void)addTestEntityFours:(NSOrderedSet*)value_ {
+	[self.testEntityFoursSet unionOrderedSet:value_];
+}
+- (void)removeTestEntityFours:(NSOrderedSet*)value_ {
+	[self.testEntityFoursSet minusOrderedSet:value_];
+}
+- (void)addTestEntityFoursObject:(TestEntityFour*)value_ {
+	[self.testEntityFoursSet addObject:value_];
+}
+- (void)removeTestEntityFoursObject:(TestEntityFour*)value_ {
+	[self.testEntityFoursSet removeObject:value_];
+}
+- (void)insertObject:(TestEntityFour*)value inTestEntityFoursAtIndex:(NSUInteger)idx {
+    NSIndexSet* indexes = [NSIndexSet indexSetWithIndex:idx];
+    [self willChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"testEntityFours"];
+    NSMutableOrderedSet *tmpOrderedSet = [NSMutableOrderedSet orderedSetWithOrderedSet:[self testEntityFours]];
+    [tmpOrderedSet insertObject:value atIndex:idx];
+    [self setPrimitiveValue:tmpOrderedSet forKey:@"testEntityFours"];
+    [self didChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"testEntityFours"];
+}
+- (void)removeObjectFromTestEntityFoursAtIndex:(NSUInteger)idx {
+    NSIndexSet* indexes = [NSIndexSet indexSetWithIndex:idx];
+    [self willChange:NSKeyValueChangeRemoval valuesAtIndexes:indexes forKey:@"testEntityFours"];
+    NSMutableOrderedSet *tmpOrderedSet = [NSMutableOrderedSet orderedSetWithOrderedSet:[self testEntityFours]];
+    [tmpOrderedSet removeObjectAtIndex:idx];
+    [self setPrimitiveValue:tmpOrderedSet forKey:@"testEntityFours"];
+    [self didChange:NSKeyValueChangeRemoval valuesAtIndexes:indexes forKey:@"testEntityFours"];
+}
+- (void)insertTestEntityFours:(NSArray *)value atIndexes:(NSIndexSet *)indexes {
+    [self willChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"testEntityFours"];
+    NSMutableOrderedSet *tmpOrderedSet = [NSMutableOrderedSet orderedSetWithOrderedSet:[self testEntityFours]];
+    [tmpOrderedSet insertObjects:value atIndexes:indexes];
+    [self setPrimitiveValue:tmpOrderedSet forKey:@"testEntityFours"];
+    [self didChange:NSKeyValueChangeInsertion valuesAtIndexes:indexes forKey:@"testEntityFours"];
+}
+- (void)removeTestEntityFoursAtIndexes:(NSIndexSet *)indexes {
+    [self willChange:NSKeyValueChangeRemoval valuesAtIndexes:indexes forKey:@"testEntityFours"];
+    NSMutableOrderedSet *tmpOrderedSet = [NSMutableOrderedSet orderedSetWithOrderedSet:[self testEntityFours]];
+    [tmpOrderedSet removeObjectsAtIndexes:indexes];
+    [self setPrimitiveValue:tmpOrderedSet forKey:@"testEntityFours"];
+    [self didChange:NSKeyValueChangeRemoval valuesAtIndexes:indexes forKey:@"testEntityFours"];
+}
+- (void)replaceObjectInTestEntityFoursAtIndex:(NSUInteger)idx withObject:(TestEntityFour*)value {
+    NSIndexSet* indexes = [NSIndexSet indexSetWithIndex:idx];
+    [self willChange:NSKeyValueChangeReplacement valuesAtIndexes:indexes forKey:@"testEntityFours"];
+    NSMutableOrderedSet *tmpOrderedSet = [NSMutableOrderedSet orderedSetWithOrderedSet:[self testEntityFours]];
+    [tmpOrderedSet replaceObjectAtIndex:idx withObject:value];
+    [self setPrimitiveValue:tmpOrderedSet forKey:@"testEntityFours"];
+    [self didChange:NSKeyValueChangeReplacement valuesAtIndexes:indexes forKey:@"testEntityFours"];
+}
+- (void)replaceTestEntityFoursAtIndexes:(NSIndexSet *)indexes withTestEntityFours:(NSArray *)value {
+    [self willChange:NSKeyValueChangeReplacement valuesAtIndexes:indexes forKey:@"testEntityFours"];
+    NSMutableOrderedSet *tmpOrderedSet = [NSMutableOrderedSet orderedSetWithOrderedSet:[self testEntityFours]];
+    [tmpOrderedSet replaceObjectsAtIndexes:indexes withObjects:value];
+    [self setPrimitiveValue:tmpOrderedSet forKey:@"testEntityFours"];
+    [self didChange:NSKeyValueChangeReplacement valuesAtIndexes:indexes forKey:@"testEntityFours"];
+}
 @end
 
 @implementation _TestEntityThree (TestEntityOnesCoreDataGeneratedAccessors)

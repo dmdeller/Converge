@@ -51,6 +51,16 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
     return YES;
 }
 
+/**
+ * Subclasses may override this method if Converge should not attempt to use the record's ID to determine whether the record already exists locally, and always create a new record when it receives one from the server.
+ *
+ * This method can be used to avoid the requirement that every record from the server must have a unique primary key, in case the server is unable to fulfil this requirement.
+ */
++ (BOOL)shouldAlwaysCreateNew
+{
+    return NO;
+}
+
 #pragma mark - Conversions
 
 /**
@@ -262,60 +272,72 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
  */
 + (instancetype)mergeChangesFromProvider:(NSDictionary *)providerRecord withQuery:(NSDictionary *)query recursive:(BOOL)recursive context:(NSManagedObjectContext *)context error:(NSError **)errorRef
 {
-    id idAttribute = [self providerIDAttributeName];
-    
-    id theID = [providerRecord objectAtPath_tc:idAttribute];
-    if (theID == nil)
-    {
-        NSDictionary *userInfo = @{
-            NSLocalizedDescriptionKey: @"The record could not be updated",
-            NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
-            ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
-        };
-        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
-        if (errorRef != nil) *errorRef = error;
-        
-        return nil;
-    }
-    
-    theID = [self convertedID:theID];
-    if (![self value:theID isCorrectClassForAttributeName:self.IDAttributeName inContext:context])
-    {
-        Class correctClass = [self classForAttributeName:self.IDAttributeName inContext:context];
-        
-        NSDictionary *userInfo = @{
-            NSLocalizedDescriptionKey: @"The record could not be updated",
-            NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
-            ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
-            ConvergeMergeableRecordUserInfoExpected: TCKNilToNull(NSStringFromClass(correctClass)),
-            ConvergeMergeableRecordUserInfoActual: TCKNilToNull(theID),
-        };
-        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
-        if (errorRef != nil) *errorRef = error;
-        
-        return nil;
-    }
-    
     ConvergeRecord *ourRecord = nil;
-    NSError *error = nil;
-    ourRecord = (ConvergeRecord *)[self recordForID:theID context:context error:&error];
     BOOL isNew = NO;
     
-    if (ourRecord == nil)
+    if ([self shouldAlwaysCreateNew])
     {
-        if (error == nil)
+        isNew = YES;
+    }
+    else
+    {
+        id idAttribute = [self providerIDAttributeName];
+        
+        id theID = [providerRecord objectAtPath_tc:idAttribute];
+        if (theID == nil)
         {
-            isNew = YES;
-            ourRecord = (ConvergeRecord *)[self newRecordInContext:context];
-        }
-        else
-        {
+            NSDictionary *userInfo = @{
+                NSLocalizedDescriptionKey: @"The record could not be updated",
+                NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
+                ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
+            };
+            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
+            
             return nil;
+        }
+        
+        theID = [self convertedID:theID];
+        if (![self value:theID isCorrectClassForAttributeName:self.IDAttributeName inContext:context])
+        {
+            Class correctClass = [self classForAttributeName:self.IDAttributeName inContext:context];
+            
+            NSDictionary *userInfo = @{
+                NSLocalizedDescriptionKey: @"The record could not be updated",
+                NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
+                ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
+                ConvergeMergeableRecordUserInfoExpected: TCKNilToNull(NSStringFromClass(correctClass)),
+                ConvergeMergeableRecordUserInfoActual: TCKNilToNull(theID),
+            };
+            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
+            if (errorRef != nil) *errorRef = error;
+            
+            return nil;
+        }
+        
+        NSError *error = nil;
+        ourRecord = (ConvergeRecord *)[self recordForID:theID context:context error:&error];
+        
+        if (ourRecord == nil)
+        {
+            if (error == nil)
+            {
+                isNew = YES;
+            }
+            else
+            {
+                if (errorRef != nil) *errorRef = error;
+                return nil;
+            }
         }
     }
     
-    error = nil;
+    if (isNew)
+    {
+        ourRecord = (ConvergeRecord *)[self newRecordInContext:context];
+    }
+    
+    NSError *error = nil;
     if ([ourRecord mergeChangesFromProvider:providerRecord withQuery:query recursive:recursive error:&error])
     {
         return ourRecord;
@@ -684,11 +706,14 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 [ourRelationshipRecords addObject:mergedRecord];
             }
             
-            error = nil;
-            if (![self dissociateRecordsNotInCollection:providerData forRelationship:ourRelationshipRecords error:&error])
+            if ([relationshipRecordClass hasConfiguredIDInContext:self.managedObjectContext])
             {
-                if (error != nil && errorRef != nil) *errorRef = error;
-                return NO;
+                error = nil;
+                if (![self dissociateRecordsNotInCollection:providerData forRelationship:ourRelationshipRecords error:&error])
+                {
+                    if (error != nil && errorRef != nil) *errorRef = error;
+                    return NO;
+                }
             }
         }
         
@@ -714,67 +739,81 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
         //NSLog(@"ConvergeMergeableRecord: recursively merging %@ related to %@", NSStringFromClass(relationshipRecordClass), NSStringFromClass([self class]));
         
         NSDictionary *providerRelatedRecord = (NSDictionary *)providerData;
-        id foreignIdName = [relationshipRecordClass providerIDAttributeName];
         
-        id foreignID = [providerRelatedRecord objectAtPath_tc:foreignIdName];
-        
-        if (foreignID == nil)
-        {
-            NSDictionary *userInfo = @{
-                NSLocalizedDescriptionKey: @"The related record could not be updated",
-                NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
-                ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Related record %@ on %@ has no ID and cannot be used", providerKey, NSStringFromClass([self class])],
-                ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
-            };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
-            if (errorRef != nil) *errorRef = error;
-            
-            return NO;
-        }
-        
-        foreignID = [relationshipRecordClass convertedID:foreignID];
-        if (![relationshipRecordClass value:foreignID isCorrectClassForAttributeName:relationshipRecordClass.IDAttributeName inContext:self.managedObjectContext])
-        {
-            Class correctClass = [relationshipRecordClass classForAttributeName:relationshipRecordClass.IDAttributeName inContext:self.managedObjectContext];
-            
-            NSDictionary *userInfo = @{
-                NSLocalizedDescriptionKey: @"The related record could not be updated",
-                NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
-                ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"ID attribute (%@) is wrong class; expected %@, found %@ (%@)", relationshipRecordClass.IDAttributeName, correctClass, [foreignID class], foreignID],
-                ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
-            };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
-            if (errorRef != nil) *errorRef = error;
-            
-            return NO;
-        }
-        
-        // Determine whether class responds to the methods we need
-        if (![relationshipRecordClass respondsToSelector:@selector(recordForID:context:error:)])
-        {
-            NSDictionary *userInfo = @{
-                NSLocalizedDescriptionKey: @"The related record could not be updated",
-                NSLocalizedFailureReasonErrorKey: @"The database could not accept this data.",
-                ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Destination class of %@ relationship on %@ is %@, which does not respond to recordForID:context:error:", ourRelationshipName, NSStringFromClass([self class]), NSStringFromClass(relationshipRecordClass)],
-                ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
-            };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedConvergeRecord userInfo:userInfo];
-            if (errorRef != nil) *errorRef = error;
-            
-            return NO;
-        }
-        
-        NSError *error = nil;
-        ConvergeRecord *relatedRecord = (ConvergeRecord *)[relationshipRecordClass recordForID:foreignID context:self.managedObjectContext error:&error];
+        ConvergeRecord *relatedRecord = nil;
         BOOL isNew = NO;
         
-        if (relatedRecord == nil)
+        if ([relationshipRecordClass shouldAlwaysCreateNew])
         {
             isNew = YES;
+        }
+        else
+        {
+            id foreignIdName = [relationshipRecordClass providerIDAttributeName];
+            
+            id foreignID = [providerRelatedRecord objectAtPath_tc:foreignIdName];
+            
+            if (foreignID == nil)
+            {
+                NSDictionary *userInfo = @{
+                    NSLocalizedDescriptionKey: @"The related record could not be updated",
+                    NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
+                    ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Related record %@ on %@ has no ID and cannot be used", providerKey, NSStringFromClass([self class])],
+                    ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
+                };
+                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
+                if (errorRef != nil) *errorRef = error;
+                
+                return NO;
+            }
+            
+            foreignID = [relationshipRecordClass convertedID:foreignID];
+            if (![relationshipRecordClass value:foreignID isCorrectClassForAttributeName:relationshipRecordClass.IDAttributeName inContext:self.managedObjectContext])
+            {
+                Class correctClass = [relationshipRecordClass classForAttributeName:relationshipRecordClass.IDAttributeName inContext:self.managedObjectContext];
+                
+                NSDictionary *userInfo = @{
+                    NSLocalizedDescriptionKey: @"The related record could not be updated",
+                    NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
+                    ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"ID attribute (%@) is wrong class; expected %@, found %@ (%@)", relationshipRecordClass.IDAttributeName, correctClass, [foreignID class], foreignID],
+                    ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
+                };
+                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
+                if (errorRef != nil) *errorRef = error;
+                
+                return NO;
+            }
+            
+            // Determine whether class responds to the methods we need
+            if (![relationshipRecordClass respondsToSelector:@selector(recordForID:context:error:)])
+            {
+                NSDictionary *userInfo = @{
+                    NSLocalizedDescriptionKey: @"The related record could not be updated",
+                    NSLocalizedFailureReasonErrorKey: @"The database could not accept this data.",
+                    ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Destination class of %@ relationship on %@ is %@, which does not respond to recordForID:context:error:", ourRelationshipName, NSStringFromClass([self class]), NSStringFromClass(relationshipRecordClass)],
+                    ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
+                };
+                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedConvergeRecord userInfo:userInfo];
+                if (errorRef != nil) *errorRef = error;
+                
+                return NO;
+            }
+            
+            NSError *error = nil;
+            ConvergeRecord *relatedRecord = (ConvergeRecord *)[relationshipRecordClass recordForID:foreignID context:self.managedObjectContext error:&error];
+            
+            if (relatedRecord == nil)
+            {
+                isNew = YES;
+            }
+        }
+        
+        if (isNew)
+        {
             relatedRecord = (ConvergeRecord *)[relationshipRecordClass newRecordInContext:self.managedObjectContext];
         }
         
-        error = nil;
+        NSError *error = nil;
         if ([relatedRecord mergeChangesFromProvider:providerRelatedRecord withQuery:query recursive:YES error:&error])
         {
             [self setValue:relatedRecord forKey:ourRelationshipName];

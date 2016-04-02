@@ -10,6 +10,7 @@ const struct TestEntityTwoAttributes TestEntityTwoAttributes = {
 };
 
 const struct TestEntityTwoRelationships TestEntityTwoRelationships = {
+	.testEntityFour = @"testEntityFour",
 	.testEntityOne = @"testEntityOne",
 };
 
@@ -71,6 +72,8 @@ const struct TestEntityTwoRelationships TestEntityTwoRelationships = {
 @dynamic someDate;
 
 @dynamic someDecimal;
+
+@dynamic testEntityFour;
 
 @dynamic testEntityOne;
 

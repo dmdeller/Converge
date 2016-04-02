@@ -14,6 +14,7 @@
 #import "TestEntityOne.h"
 #import "TestEntityTwo.h"
 #import "TestEntityThree.h"
+#import "TestEntityFour.h"
 
 @interface Converge_Tests : XCTestCase
 
@@ -226,5 +227,60 @@
     
     [self waitForExpectationsWithTimeout:60 handler:nil];
 }
+
+#pragma mark - Without IDs
+
+- (void)testMergeEmbeddedRecordsToOneWithoutID
+{
+    static NSString *seedDirectory = @"Seeds/testMergeEmbeddedRecordsToOneWithoutID";
+    XCTestExpectation *importTestEntityTwoExpectation = [self expectationWithDescription:@"import TestEntityTwo"];
+    
+    [self.importer importFromRecordClass:TestEntityTwo.class fromFileAtPath:[[NSBundle bundleForClass:self.class] pathForResource:@"TestEntityTwo" ofType:@"json" inDirectory:seedDirectory] success:^(id result)
+     {
+         [importTestEntityTwoExpectation fulfill];
+         
+         XCTAssertEqual([TestEntityFour allRecordsSortedBy:nil context:self.context error:nil].count, 2);
+         XCTAssertEqual([TestEntityTwo allRecordsSortedBy:nil context:self.context error:nil].count, 2);
+         
+         XCTAssertEqual(((TestEntityFour *)[TestEntityFour recordsWhere:@{@"someString": @"foo"} requireAll:YES sortBy:nil limit:1 context:self.context error:nil].firstObject).testEntityTwos.count, 1);
+         XCTAssertEqual(((TestEntityFour *)[TestEntityFour recordsWhere:@{@"someString": @"bar"} requireAll:YES sortBy:nil limit:1 context:self.context error:nil].firstObject).testEntityTwos.count, 1);
+         
+         XCTAssertEqualObjects([TestEntityTwo recordForID:@1 context:self.context error:nil].testEntityFour.someString, @"foo");
+         XCTAssertEqualObjects([TestEntityTwo recordForID:@2 context:self.context error:nil].testEntityFour.someString, @"bar");
+     }
+    failure:^(NSError *error)
+     {
+         XCTFail(@"Error importing: %@", error);
+     }];
+    
+    [self waitForExpectationsWithTimeout:60 handler:nil];
+}
+
+- (void)testMergeEmbeddedRecordsToManyWithoutID
+{
+    static NSString *seedDirectory = @"Seeds/testMergeEmbeddedRecordsToManyWithoutID";
+    XCTestExpectation *importTestEntityThreeExpectation = [self expectationWithDescription:@"import TestEntityThree"];
+
+    [self.importer importFromRecordClass:TestEntityThree.class fromFileAtPath:[[NSBundle bundleForClass:self.class] pathForResource:@"TestEntityThree" ofType:@"json" inDirectory:seedDirectory] success:^(id result)
+     {
+         [importTestEntityThreeExpectation fulfill];
+         
+         XCTAssertEqual([TestEntityFour allRecordsSortedBy:nil context:self.context error:nil].count, 3);
+         XCTAssertEqual([TestEntityThree allRecordsSortedBy:nil context:self.context error:nil].count, 2);
+         
+         XCTAssertEqual(((TestEntityFour *)[TestEntityFour recordsWhere:@{@"someString": @"foo"} requireAll:YES sortBy:nil limit:1 context:self.context error:nil].firstObject).testEntityThrees.count, 1);
+         
+         XCTAssertEqualObjects([((TestEntityFour *)[TestEntityFour recordsWhere:@{@"someString": @"foo"} requireAll:YES sortBy:nil limit:1 context:self.context error:nil].firstObject).testEntityThrees[0] id], @1);
+         XCTAssertEqualObjects([((TestEntityFour *)[TestEntityFour recordsWhere:@{@"someString": @"bar"} requireAll:YES sortBy:nil limit:1 context:self.context error:nil].firstObject).testEntityThrees[0] id], @2);
+         XCTAssertEqualObjects([((TestEntityFour *)[TestEntityFour recordsWhere:@{@"someString": @"baz"} requireAll:YES sortBy:nil limit:1 context:self.context error:nil].firstObject).testEntityThrees[0] id], @2);
+     }
+    failure:^(NSError *error)
+     {
+         XCTFail(@"Error importing: %@", error);
+     }];
+    
+    [self waitForExpectationsWithTimeout:60 handler:nil];
+}
+
 
 @end

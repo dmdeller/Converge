@@ -42,7 +42,7 @@
 {
     if (self.class.IDAttributeName == nil)
     {
-        TCKRaiseFormat(@"No IDAttributeName configured for class: %@", self.class);
+        TCKRaiseFormat(@"No IDAttributeName configured for class: %@ -- HINT: If this class isn't supposed to or can't have an ID, return YES from +shouldAlwaysCreateNew. You will lose some merging functionality by doing this.", self.class);
     }
     
     return [self valueForKey:self.class.IDAttributeName];

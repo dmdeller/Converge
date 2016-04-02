@@ -11,9 +11,11 @@ extern const struct TestEntityThreeAttributes {
 } TestEntityThreeAttributes;
 
 extern const struct TestEntityThreeRelationships {
+	__unsafe_unretained NSString *testEntityFours;
 	__unsafe_unretained NSString *testEntityOnes;
 } TestEntityThreeRelationships;
 
+@class TestEntityFour;
 @class TestEntityOne;
 
 @interface TestEntityThreeID : NSManagedObjectID {}
@@ -45,9 +47,28 @@ extern const struct TestEntityThreeRelationships {
 
 //- (BOOL)validateSomeString:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSOrderedSet *testEntityFours;
+
+- (NSMutableOrderedSet*)testEntityFoursSet;
+
 @property (nonatomic, strong) NSOrderedSet *testEntityOnes;
 
 - (NSMutableOrderedSet*)testEntityOnesSet;
+
+@end
+
+@interface _TestEntityThree (TestEntityFoursCoreDataGeneratedAccessors)
+- (void)addTestEntityFours:(NSOrderedSet*)value_;
+- (void)removeTestEntityFours:(NSOrderedSet*)value_;
+- (void)addTestEntityFoursObject:(TestEntityFour*)value_;
+- (void)removeTestEntityFoursObject:(TestEntityFour*)value_;
+
+- (void)insertObject:(TestEntityFour*)value inTestEntityFoursAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromTestEntityFoursAtIndex:(NSUInteger)idx;
+- (void)insertTestEntityFours:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeTestEntityFoursAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInTestEntityFoursAtIndex:(NSUInteger)idx withObject:(TestEntityFour*)value;
+- (void)replaceTestEntityFoursAtIndexes:(NSIndexSet *)indexes withTestEntityFours:(NSArray *)values;
 
 @end
 
@@ -82,6 +103,9 @@ extern const struct TestEntityThreeRelationships {
 
 - (NSString*)primitiveSomeString;
 - (void)setPrimitiveSomeString:(NSString*)value;
+
+- (NSMutableOrderedSet*)primitiveTestEntityFours;
+- (void)setPrimitiveTestEntityFours:(NSMutableOrderedSet*)value;
 
 - (NSMutableOrderedSet*)primitiveTestEntityOnes;
 - (void)setPrimitiveTestEntityOnes:(NSMutableOrderedSet*)value;
