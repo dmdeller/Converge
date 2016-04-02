@@ -408,7 +408,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
         }
     }
     
-    if (shouldDeleteStale)
+    if (shouldDeleteStale && [self hasConfiguredIDInContext:context])
     {
         NSPredicate *predicate = [self predicateForQuery:query context:context];
         NSError *error = nil;
