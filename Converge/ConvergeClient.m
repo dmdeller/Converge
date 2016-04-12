@@ -34,6 +34,7 @@
         _requestTimestamps = NSMutableDictionary.new;
         
         self.requestSerializer = AFJSONRequestSerializer.new;
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     }
     return self;
 }
