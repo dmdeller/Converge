@@ -33,7 +33,7 @@
         _trackModifiedTimes = NO;
         _requestTimestamps = NSMutableDictionary.new;
         
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        self.requestSerializer = AFJSONRequestSerializer.new;
     }
     return self;
 }
