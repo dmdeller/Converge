@@ -257,7 +257,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
             ConvergeMergeableRecordUserInfoValidationType: @(validationType),
             ConvergeMergeableRecordUserInfoChangedValues: TCKNilToNull(self.changedValues),
         };
-        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorFailedValidation userInfo:userInfo];
+        NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorFailedValidation userInfo:userInfo];
         if (errorRef != nil) *errorRef = error;
         
         [self.managedObjectContext.undoManager undoNestedGroup];
@@ -291,7 +291,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
                 ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRecord),
             };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
             
             return nil;
@@ -309,7 +309,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 ConvergeMergeableRecordUserInfoExpected: TCKNilToNull(NSStringFromClass(correctClass)),
                 ConvergeMergeableRecordUserInfoActual: TCKNilToNull(theID),
             };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
             
             return nil;
@@ -375,18 +375,18 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
         {
             if (skipInvalid)
             {
-                if ([error.domain isEqualToString:ConvergeRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorProviderIDMissing)
+                if ([error.domain isEqualToString:ConvergeMergeableRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorProviderIDMissing)
                 {
                     NSLog(@"%@: Skipping record because ID attribute (%@) was not found: %@", self, self.IDAttributeName, providerRecord);
                 }
-                else if ([error.domain isEqualToString:ConvergeRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorProviderIDWrongType)
+                else if ([error.domain isEqualToString:ConvergeMergeableRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorProviderIDWrongType)
                 {
                     NSString *correctClassName = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoExpected]);
                     id theID = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoActual]);
                     
                     NSLog(@"%@: Skipping record because ID attribute (%@) is wrong class; expected %@, found %@ (%@)", self.class, self.IDAttributeName, correctClassName, [theID class], theID);
                 }
-                else if ([error.domain isEqualToString:ConvergeRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorFailedValidation)
+                else if ([error.domain isEqualToString:ConvergeMergeableRecordErrorDomain] && error.code == ConvergeMergeableRecordErrorFailedValidation)
                 {
                     NSDictionary *changedValues = TCKNullToNil(error.userInfo[ConvergeMergeableRecordUserInfoChangedValues]);
                     
@@ -485,7 +485,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
             NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
             ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Incorrect class for attribute: %@, expected class: %@, given class: %@, data: %@", ourAttributeKey, correctClass, [providerData class], providerData],
         };
-        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderAttributeWrongType userInfo:userInfo];
+        NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderAttributeWrongType userInfo:userInfo];
         if (errorRef != nil) *errorRef = error;
         
         return NO;
@@ -512,7 +512,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
             NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
             ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Destination class of %@ relationship on %@ is %@, which does not respond to recordForID:context:error:", ourForeignKey, NSStringFromClass([self class]), NSStringFromClass(relationshipRecordClass)],
         };
-        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedConvergeRecord userInfo:userInfo];
+        NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedConvergeRecord userInfo:userInfo];
         if (errorRef != nil) *errorRef = error;
         
         return NO;
@@ -540,7 +540,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 NSLocalizedFailureReasonErrorKey: @"The database could not accept this data.",
                 ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Provider has %@ as a to-many relationship on %@, but our core data store is not configured this way", ourForeignKey, NSStringFromClass([self class])],
             };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderToManyLocalToOne userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderToManyLocalToOne userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
             
             return NO;
@@ -592,7 +592,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 NSLocalizedFailureReasonErrorKey: @"None of the provided records could be used.",
                 ConvergeMergeableRecordUserInfoLogMessage: @"None of the provided keys could be merged successfully. See previous console log messages for details.",
             };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorMultipleErrors userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorMultipleErrors userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
             
             return NO;
@@ -611,7 +611,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 NSLocalizedFailureReasonErrorKey: @"The provided data was not valid.",
                 ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"ID attribute (%@) is wrong class; expected %@, found %@ (%@)", relationshipRecordClass.IDAttributeName, correctClass, [foreignID class], foreignID],
             };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
             
             return NO;
@@ -635,7 +635,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                     NSLocalizedFailureReasonErrorKey: @"The referenced record is not in the database.",
                     ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Unable to update %@ relationship for %@ because the core data %@ with id %@ was not found:", ourForeignKey, NSStringFromClass([self class]), NSStringFromClass(relationshipRecordClass), foreignID],
                 };
-                error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorLocalRecordNotFound userInfo:userInfo];
+                error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorLocalRecordNotFound userInfo:userInfo];
                 if (errorRef != nil) *errorRef = error;
             }
             else
@@ -728,7 +728,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                 NSLocalizedFailureReasonErrorKey: @"None of the provided records could be used.",
                 ConvergeMergeableRecordUserInfoLogMessage: @"None of the provider records could be merged successfully. See previous console log messages for details.",
             };
-            NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorMultipleErrors userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorMultipleErrors userInfo:userInfo];
             if (errorRef != nil) *errorRef = error;
             
             return NO;
@@ -761,7 +761,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                     ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Related record %@ on %@ has no ID and cannot be used", providerKey, NSStringFromClass([self class])],
                     ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
                 };
-                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
+                NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDMissing userInfo:userInfo];
                 if (errorRef != nil) *errorRef = error;
                 
                 return NO;
@@ -778,7 +778,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                     ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"ID attribute (%@) is wrong class; expected %@, found %@ (%@)", relationshipRecordClass.IDAttributeName, correctClass, [foreignID class], foreignID],
                     ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
                 };
-                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
+                NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorProviderIDWrongType userInfo:userInfo];
                 if (errorRef != nil) *errorRef = error;
                 
                 return NO;
@@ -793,7 +793,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
                     ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Destination class of %@ relationship on %@ is %@, which does not respond to recordForID:context:error:", ourRelationshipName, NSStringFromClass([self class]), NSStringFromClass(relationshipRecordClass)],
                     ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerRelatedRecord),
                 };
-                NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedConvergeRecord userInfo:userInfo];
+                NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedConvergeRecord userInfo:userInfo];
                 if (errorRef != nil) *errorRef = error;
                 
                 return NO;
@@ -840,7 +840,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
             ConvergeMergeableRecordUserInfoLogMessage: [NSString stringWithFormat:@"Unknown type of data specified by provider in class: %@ for provider's key: %@ - expected array or dictionary", NSStringFromClass([self class]), providerKey],
             ConvergeMergeableRecordUserInfoProviderData: TCKNilToNull(providerData),
         };
-        NSError *error = [NSError errorWithDomain:ConvergeRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedCollection userInfo:userInfo];
+        NSError *error = [NSError errorWithDomain:ConvergeMergeableRecordErrorDomain code:ConvergeMergeableRecordErrorExpectedCollection userInfo:userInfo];
         if (errorRef != nil) *errorRef = error;
         
         return NO;
