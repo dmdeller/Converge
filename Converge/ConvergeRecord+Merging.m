@@ -800,7 +800,7 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
             }
             
             NSError *error = nil;
-            ConvergeRecord *relatedRecord = (ConvergeRecord *)[relationshipRecordClass recordForID:foreignID context:self.managedObjectContext error:&error];
+            relatedRecord = (ConvergeRecord *)[relationshipRecordClass recordForID:foreignID context:self.managedObjectContext error:&error];
             
             if (relatedRecord == nil)
             {
