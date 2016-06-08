@@ -180,10 +180,14 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
     for (NSString *ourKey in ourAttributes)
     {
         id providerKey = attributeMap[ourKey];
-        id providerData = TCKNullToNil([providerRecord objectAtPath_tc:providerKey]);
+        id providerData = [providerRecord objectAtPath_tc:providerKey];
         
+        // If providerData is an NSNull, then that means the server sent us null, and we should merge it.
+        // If providerData is a nil, then that means the server did not send *anything* for this attribute, so we should ignore it.
         if (providerData != nil)
         {
+            providerData = TCKNullToNil(providerData);
+            
             NSError *error = nil;
             if (![self mergeAttributeForKey:ourKey fromProviderKey:providerKey withData:providerData error:&error])
             {
@@ -195,10 +199,12 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
     for (NSString *ourKey in ourForeignKeys)
     {
         id providerKey = foreignKeyMap[ourKey];
-        id providerData = TCKNullToNil([providerRecord objectAtPath_tc:providerKey]);
+        id providerData = [providerRecord objectAtPath_tc:providerKey];
         
         if (providerData != nil)
         {
+            providerData = TCKNullToNil(providerData);
+            
             NSError *error = nil;
             if (![self mergeForeignKey:ourKey fromProviderKey:providerKey withData:providerData error:&error])
             {
@@ -212,10 +218,12 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
         for (NSString *ourKey in ourRelationships)
         {
             id providerKey = relationshipMap[ourKey];
-            id providerData = TCKNullToNil([providerRecord objectAtPath_tc:providerKey]);
+            id providerData = [providerRecord objectAtPath_tc:providerKey];
             
             if (providerData != nil)
             {
+                providerData = TCKNullToNil(providerData);
+                
                 NSError *error = nil;
                 if (![self mergeRelatedRecordForKey:ourKey fromProviderKey:providerKey withData:providerData andQuery:query error:&error])
                 {
