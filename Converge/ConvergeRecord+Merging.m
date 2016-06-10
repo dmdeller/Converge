@@ -658,8 +658,11 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
 
 - (BOOL)mergeRelatedRecordForKey:(NSString *)ourRelationshipName fromProviderKey:(id)providerKey withData:(id)providerData andQuery:(NSDictionary *)origQuery error:(NSError **)errorRef
 {
-    NSMutableDictionary *query = origQuery.mutableCopy;
-    if (query == nil) query = NSMutableDictionary.new;
+    // Currently, the original query is not used in this method.
+    // We assume that the HTTP query functions like a predicate in a Core Data query.
+    // We also assume that the query parameters pertain to the root-level records returned by the server.
+    // If we were to use those parameters for related sub-records, it could cause undesired behavior, in cases where the related records have the same attribute names as the root-level records.
+    NSMutableDictionary *query = NSMutableDictionary.new;
     
     NSRelationshipDescription *ourRelationship = self.entity.relationshipsByName[ourRelationshipName];
     Class relationshipRecordClass = [self.class classForRelationshipName:ourRelationshipName context:self.managedObjectContext];
