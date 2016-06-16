@@ -5,14 +5,14 @@
 #
 Pod::Spec.new do |s|
   s.name         = "Converge"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = 'Library for integrating between Core Data and a web API'
   s.homepage     = 'https://github.com/tripcraft/Converge'
   s.license      = 'MIT'
 
   s.authors      = { "David Deller" => "david.deller@tripcraft.com" }
 
-  s.source       = { :git => "https://github.com/tripcraft/Converge.git", :tag => 'v1.0.0' }
+  s.source       = { :git => "https://github.com/tripcraft/Converge.git", :tag => 'v1.1.0' }
 
   s.platform     = :ios, '7.0'
   s.source_files = 'Converge', 'Converge/**/*.{h,m}'
