@@ -340,4 +340,4 @@ Authors
 
 Created by David Deller <david.deller@tripcraft.com>.
 
-Copyright © 2012-2015 TripCraft LLC.
+Copyright © 2012-2016 TripCraft LLC.
