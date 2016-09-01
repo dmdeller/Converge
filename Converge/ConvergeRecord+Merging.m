@@ -908,9 +908,16 @@ static NSTimeInterval const TCKDefaultCacheTime = 30.0 * 60.0;
 {
     NSMutableArray *ids = [NSMutableArray arrayWithCapacity:providerRecordCollection.count];
     
+    if (relationship.allObjects.firstObject == nil)
+    {
+        // No related records; nothing to do
+        return YES;
+    }
+    Class foreignRecordClass = ((NSObject *)relationship.allObjects.firstObject).class;
+    
     for (NSDictionary *providerRecord in providerRecordCollection)
     {
-        id theID = [self.class convertedID:[providerRecord objectAtPath_tc:self.class.providerIDAttributeName]];
+        id theID = [foreignRecordClass convertedID:[providerRecord objectAtPath_tc:foreignRecordClass.providerIDAttributeName]];
         if (theID != nil)
         {
             [ids addObject:theID];
