@@ -501,6 +501,8 @@
      }
     failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
+         [self.context rollback];
+         NSLog(@"%@ (FOREGROUND): provider rejected sent %@, rolling back core data", self.class, [record class]);
          if (failure != nil) failure(operation, [self errorForOperation:operation error:error]);
      }];
     
